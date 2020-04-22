@@ -25,7 +25,7 @@ class TK(unittest.TestSuite):
         # 按地址进入界面
         driver.get('https://a.imways.com/#/Login')
         # 刷新图片验证码
-        driver.find_element_by_class_name('captchaImage').click()
+        # driver.find_element_by_class_name('captchaImage').click()
         time.sleep(1)
         # 截取屏幕内容，保存到本地
         driver.save_screenshot('D://test/01.png')
@@ -83,8 +83,8 @@ class TK(unittest.TestSuite):
     def gettk(self, signname, signpass):
         signurl = 'https://api.imways.com/authentication/mall/staff/signin'
         signheaders = {
-            'content-type': 'application/json;charset=UTF-8',
-            'cookie': 'ways_captcha_id=9a0e7feb-9ece-4af9-9f9d-3f11d490426c; SESSION=ca541381-2964-4664-8783-d1aca7515c12; SERVERID=c0d431612f22feee04ca31341db22539|1586485082|1586221459'
+            'content-type': 'application/json;charset=UTF-8'
+            # 'cookie': 'ways_captcha_id=9a0e7feb-9ece-4af9-9f9d-3f11d490426c; SESSION=ca541381-2964-4664-8783-d1aca7515c12; SERVERID=c0d431612f22feee04ca31341db22539|1586485082|1586221459'
 
         }
         signdata = {
@@ -95,7 +95,7 @@ class TK(unittest.TestSuite):
             'password': signpass,
             'captcha': res
         }
-        tk = requests.post(signurl, data=signdata).json()
+        tk = requests.post(signurl, headers=signheaders, data=signdata).json()
         print(tk)
         print(tk['code'])
         return tk['code'], tk['data']

@@ -99,22 +99,34 @@ class TK(unittest.TestSuite):
         print(tk)
         print(tk['code'])
         return tk['code'], tk['data']
+    # 通过简易图片，来对图片进行解读
+    def picture(self):
+        # 拿到图片验证码的二进制格式
+        pictureurl = 'https://api.imways.com/authentication/captcha'
+        Binary = requests.get(url=pictureurl).json()['data']
+        print(Binary)
+        # 对图片二进制进行解析
+        analysis = base64.b64encode(Binary)
+        print(analysis)
+        return codes
 
 if __name__ == '__main__':
     i = TK()
-    # 访问网址
-    url = 'https://a.imways.com/#/Login'
-    # 图片验证码class元素
-    classa = 'captchaImage'
-    # 调用截取验证码
-    # a = i.obtaincode(url, classa)
-    i.obtaincode()
-    # 获取百度应用tk
-    o = xym.request.mybaiduTK.mytk()
-    # 百度接口识别图片验证码
-    i.Distinguishcode(o)
-    # 进行登录接口验证
-    signname = '15871255250'
-    signpass = '654789'
-    a, b = i.gettk(signname, signpass)
-    print(b)
+    # # 访问网址
+    # url = 'https://a.imways.com/#/Login'
+    # # 图片验证码class元素
+    # classa = 'captchaImage'
+    # # 调用截取验证码
+    # # a = i.obtaincode(url, classa)
+    # i.obtaincode()
+    # # 获取百度应用tk
+    # o = xym.request.mybaiduTK.mytk()
+    # # 百度接口识别图片验证码
+    # i.Distinguishcode(o)
+    #
+    # # 进行登录接口验证
+    # signname = '15871255250'
+    # signpass = '654789'
+    # a, b = i.gettk(signname, signpass)
+    # print(b)
+    i.picture()

@@ -56,8 +56,8 @@ class TK(unittest.TestSuite):
         # code = pytesseract.image_to_string(sharp_img)
         # # 收到验证码，进行输入验证
         # print(code)
-        driver.close()
-        return code
+        # driver.close()
+        # return code
     # 百度识别图片验证码
     def Distinguishcode(self, baidutk):
         global res
@@ -77,6 +77,7 @@ class TK(unittest.TestSuite):
         else:
             print('没有空格')
         print('图片验证码：', res)
+        print(res)
         return res
     # 登录网页获取系统tk
     def gettk(self, signname, signpass):

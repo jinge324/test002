@@ -20,24 +20,46 @@
 #     fp.close()
 
 import xym.fee.fee_one
+import xym.fee.fee_test_data.fee_one_data
+import xym.fee.fee_electric
+import xym.order.order_activity_one
 import xym.request.mybaiduTK
 import xym.request.obtainTK
 
 if __name__ == "__main__":
-    fee = xym.fee.fee_one.fee_test01()
-    # 查询店铺ID
-    fee.storeId('雪中')
-    # 新建应付费用
-    # EXPENSE（应付费用）   DEPOSIT（保证金）
-    # feeAmount,  # 应缴金额
-    # startDate,  # 费用单起始时间
-    # endDate,  # 费用单终止时间
-    # payDate,  # 应缴付时间
-    # refundDate,  # 可退时间（保证金独有）
-    fee.addfee('DEPOSIT', '500', '2020-04-08', '2020-04-08', '2020-04-08', '2020-04-08')
-    # 审核费用单’YES‘审核通过！其它审核不同！
-    fee.examinefee('YES')
+    fee = xym.fee.fee_electric
+    # # 查询店铺ID
+    # fee.storeId('雪中')
+    # # 新建应付费用
+    # # EXPENSE（应付费用）   DEPOSIT（保证金）
+    # # feeAmount,  # 应缴金额
+    # # startDate,  # 费用单起始时间
+    # # endDate,  # 费用单终止时间
+    # # payDate,  # 应缴付时间
+    # # refundDate,  # 可退时间（保证金独有）
+    # fee.addfee('DEPOSIT', '500', '2020-04-08', '2020-04-08', '2020-04-08', '2020-04-08')
+    # # 审核费用单’YES‘审核通过！其它审核不同！
+    # fee.examinefee('NO')
     # o = xym.request.mybaiduTK.mytk()
+    # # 撤销待审费用单
+    # fee.revoke()
+    # # 撤销审核通过费用单
+    # fee.revoke_tobesettled()
+    # # 撤销审核不通过费用单
+    # fee.revoke_fail()
+    # 结算新建费用单
+    # fee.fee_settlement()
+    # 开单
+    # fee.order_user()
+    # fee.order_address()
+    # fee.order_card()
+    # print(len(xym.fee.fee_test_data.fee_one_data.card))
+    # orderer = xym.order.order_activity_one.order_test01
+    # orderer.order_user()
 
+    numbers = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    fee.electric.pay(numbers[1])
+    # for cardId in numbers:
+    #     fee.electric.pay(cardId)
 
 

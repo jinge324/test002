@@ -1,16 +1,10 @@
-import xym.fee.fee_one
-
 # 测试商场下的
 headers = {
         'x - application - context': 'component - gateway - server:8888',
         'content-type': 'application/json;charset=UTF-8',
         'accept': 'application/json, text/javascript, */*; q=0.01',
-        'tk': 'YmUzMWQzNmItYjQwZC00N2I2LTgzZmEtNjg1YmViY2M5MDhlMTU4NzEyNTUyNTA=c3RhZmY=MTU4OTE2MTExNw=='
+        'tk': 'MzU1ODM2NzgtNTA0NS00ZTMwLTkwMjQtZGY2NjMwYzE3OTM5MTM3MDAwMDAwMTI=Y2xlcms=MTU4OTE2Nzc0Mg=='
         }
-
-# 开单时会员卡的选择
-card = '中国业主龙卡'
-
 
 # 电费添加缴费备注
 remark = {
@@ -22,3 +16,11 @@ remark = {
     'f': 'aaaaaaaaaaaaaaaaaaa',
     'g': 'qwertyuiopasdfghjklzxc'
 }
+
+billing = {
+    # 开单用户的手机号
+    'phonenumber': '15871255250',
+    # 开单时会员卡的选择
+    'card': '喜盈门会员卡'
+    }
+

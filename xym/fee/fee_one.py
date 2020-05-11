@@ -184,3 +184,6 @@ class fee_test01(unittest.TestCase):
 
 
         return membershipcard
+
+    print(sjioejf
+    '')

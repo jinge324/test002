@@ -22,9 +22,10 @@
 import xym.fee.fee_one
 import xym.fee.fee_test_data.fee_one_data
 import xym.fee.fee_electric
-import xym.order.order_activity_one
 import xym.request.mybaiduTK
 import xym.request.obtainTK
+import HTMLTestRunner
+import unittest
 
 if __name__ == "__main__":
     fee = xym.fee.fee_electric
@@ -57,8 +58,10 @@ if __name__ == "__main__":
     # orderer = xym.order.order_activity_one.order_test01
     # orderer.order_user()
 
-    numbers = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-    fee.electric.pay(numbers[1])
+
+    # # 预缴电费充值
+    # numbers = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    # # fee.electric.pay(numbers[1])
     # for cardId in numbers:
     #     fee.electric.pay(cardId)
 

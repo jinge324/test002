@@ -58,12 +58,39 @@ class TK(unittest.TestSuite):
         # print(code)
         # driver.close()
         # return code
+
+        # 通过简易图片，来对图片进行解读
+    def picture(self):
+        global cookiesd
+        # 拿到图片验证码的二进制格式
+        url = 'https://api.imways.com/authentication/captcha'
+        data = requests.get(url)
+        result = data.text
+        # 取文件图片cookies
+        cookies = requests.utils.dict_from_cookiejar(data.cookies)
+        cookies = requests.utils.cookiejar_from_dict(cookie_dict=cookies, cookiejar=None, overwrite=True)
+        cookiesd = cookies.get('SERVERID')
+        # print(cookies)
+        print(cookiesd)
+        # 解析二进制文件为图片
+        base64data = json.loads(result)["data"]
+        imgdata = base64.b64decode(base64data)
+        file = open('D://test/captcha.jpg', 'wb')
+        file.write(imgdata)
+        file.close()
+        # 获取验证码图片，读取验证码
+        imageCode = Image.open("D://test/captcha.jpg")
+        # 图像增强，二值化
+        sharp_img = ImageEnhance.Contrast(imageCode).enhance(2.0)
+        sharp_img.save("D://test/04.png")
+        sharp_img.load()  # 对比度增强
+
     # 百度识别图片验证码
     def Distinguishcode(self, baidutk):
         global res
         request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic"
         # 二进制方式打开图片文件
-        f = open('D:/test/03.png', 'rb')
+        f = open('D:/test/04.png', 'rb')
         img = base64.b64encode(f.read())
 
         params = {'image': img}
@@ -82,10 +109,13 @@ class TK(unittest.TestSuite):
     # 登录网页获取系统tk
     def gettk(self, signname, signpass):
         signurl = 'https://api.imways.com/authentication/mall/staff/signin'
+        cookies = 'SERVERID=' + cookiesd + ';Path=/'
+        print(cookies)
         signheaders = {
-            'content-type': 'application/json;charset=UTF-8'
-            # 'cookie': 'ways_captcha_id=9a0e7feb-9ece-4af9-9f9d-3f11d490426c; SESSION=ca541381-2964-4664-8783-d1aca7515c12; SERVERID=c0d431612f22feee04ca31341db22539|1586485082|1586221459'
-
+            # 'content-type': 'application/json;charset=UTF-8',
+            'set-cookie': cookies,
+            'x - application - context': 'component - gateway - server:8888',
+            'access - control - expose - headers': 'fileName, Content - Disposition'
         }
         signdata = {
             'type': 0,
@@ -99,16 +129,7 @@ class TK(unittest.TestSuite):
         print(tk)
         print(tk['code'])
         return tk['code'], tk['data']
-    # 通过简易图片，来对图片进行解读
-    def picture(self):
-        # 拿到图片验证码的二进制格式
-        pictureurl = 'https://api.imways.com/authentication/captcha'
-        Binary = requests.get(url=pictureurl).json()['data']
-        print(Binary)
-        # 对图片二进制进行解析
-        analysis = base64.b64encode(Binary)
-        print(analysis)
-        return codes
+
 
 if __name__ == '__main__':
     i = TK()
@@ -119,14 +140,16 @@ if __name__ == '__main__':
     # # 调用截取验证码
     # # a = i.obtaincode(url, classa)
     # i.obtaincode()
-    # # 获取百度应用tk
-    # o = xym.request.mybaiduTK.mytk()
-    # # 百度接口识别图片验证码
-    # i.Distinguishcode(o)
-    #
-    # # 进行登录接口验证
-    # signname = '15871255250'
-    # signpass = '654789'
-    # a, b = i.gettk(signname, signpass)
-    # print(b)
+
+    # 调用接口识别验证码
     i.picture()
+    # 获取百度应用tk
+    o = xym.request.mybaiduTK.mytk()
+    # 百度接口识别图片验证码
+    i.Distinguishcode(o)
+    # 进行登录接口验证
+    signname = '15871255250'
+    signpass = '654789'
+    a, b = i.gettk(signname, signpass)
+    print(b)
+

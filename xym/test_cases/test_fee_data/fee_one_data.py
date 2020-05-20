@@ -3,7 +3,8 @@ headers = {
         'x - application - context': 'component - gateway - server:8888',
         'content-type': 'application/json;charset=UTF-8',
         'accept': 'application/json, text/javascript, */*; q=0.01',
-        'tk': 'MzU1ODM2NzgtNTA0NS00ZTMwLTkwMjQtZGY2NjMwYzE3OTM5MTM3MDAwMDAwMTI=Y2xlcms=MTU4OTE2Nzc0Mg=='
+        'tk': 'NjJmZjliNmUtNGQ1My00NDgyLTk2YWEtYWJmMDU1N2I5NTZjMTM3MDAwMDAwMTI=Y2xlcms=MTU4OTg4MzgxOA=='
+
         }
 
 # 电费添加缴费备注
@@ -17,10 +18,24 @@ remark = {
     'g': 'qwertyuiopasdfghjklzxc'
 }
 
+# 开单数据
 billing = {
+    # 新顾客
+    'newname': 'nicai',
+    'newnumber': '66700000004',
     # 开单用户的手机号
     'phonenumber': '15871255250',
     # 开单时会员卡的选择
-    'card': '喜盈门会员卡'
+    'card': '喜盈门会员卡',
+    # 顾客会员卡信息
+    'ka': {}
     }
+
+# 查询商户端订单管理
+orderstatus = {
+    # 分页
+    'pageNo': 1,
+    'pageSize': 100,
+}
+
 

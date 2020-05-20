@@ -77,10 +77,11 @@ if __name__ == "__main__":
     # runner = unittest.TextTestRunner()   # 执行套件中的用例
     # runner = HtmlTestRunner.HTMLTestRunner(stream=fp, report_title='接口测试报告', descriptions='测试结果如下：')
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='接口测试报告', description='测试结果如下：')
+    runner1 = HTMLTestRunnerCN.HTMLTestReportCN(stream=fp, title='接口测试报告', description='测试结果如下：')
     #  stream = fp  引用文件流
     #  title  测试报告标题
     #  description  报告说明与描述
-    runner.run(suite)   # 执行测试
+    runner1.run(suite)   # 执行测试
     fp.close()   # 关闭文件流，将HTML内容写进测试报告文件
 
 

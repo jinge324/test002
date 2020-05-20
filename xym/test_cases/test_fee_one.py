@@ -2,7 +2,7 @@ import json
 import unittest
 import xym.request.myrequests
 import xym.request.assertion
-import xym.fee.fee_test_data.fee_one_data
+import xym.test_cases.test_fee_data.fee_one_data
 
 class fee_test01(unittest.TestCase):
     global run, headers, assertion
@@ -10,7 +10,7 @@ class fee_test01(unittest.TestCase):
     run = xym.request.myrequests.RunMain()
     assertion = xym.request.assertion
     # 威石tk
-    headers = xym.fee.fee_test_data.fee_one_data.headers
+    headers = xym.test_cases.test_fee_data.fee_one_data.headers
     # 查询店铺storeId
     def storeId(self, namestore):
         global res1
@@ -31,7 +31,7 @@ class fee_test01(unittest.TestCase):
     # 新建应付费用
     def addfee(self, itemType, feeAmount, startDate, endDate, payDate, refundDate):
         global res
-        url2 = 'https://api.imways.com/mall/fee/my/create/fee'
+        url2 = 'https://api.imways.com/mall/test_cases/my/create/test_cases'
         if itemType == 'EXPENSE':
             data2 = {
                 'itemType': 'EXPENSE',  # EXPENSE（应付费用）   DEPOSIT（保证金）
@@ -77,7 +77,7 @@ class fee_test01(unittest.TestCase):
     # 审核新建的费用单
     def examinefee(self, bei):
         if bei == 'YES':
-            u3 = 'https://api.imways.com/mall/fee/my/audit/approve?feeBillNo='
+            u3 = 'https://api.imways.com/mall/test_cases/my/audit/approve?feeBillNo='
             r3 = res['data']
             url3 = u3 + r3
             data3 = {
@@ -86,7 +86,7 @@ class fee_test01(unittest.TestCase):
             assertion.assertions(self, contrast=200, passvalue=examine['code'])
             print('审核通过费用单', examine)
         else:
-            u4 = 'https://api.imways.com/mall/fee/my/audit/reject?'
+            u4 = 'https://api.imways.com/mall/test_cases/my/audit/reject?'
             r4 = 'feeBillNo=' + res['data']
             l4 = '&reason=' + bei
             url4 = u4 + r4 + l4
@@ -101,7 +101,7 @@ class fee_test01(unittest.TestCase):
 
     # 撤销待审核费用单
     def revoke(self):
-        revokeurl = 'https://api.imways.com/mall/fee/my/audit/revoke/pending/audit?feeBillNo=' + res['data']
+        revokeurl = 'https://api.imways.com/mall/test_cases/my/audit/revoke/pending/audit?feeBillNo=' + res['data']
         revokedata = {}
         idasd = run.run_main(revokeurl, 'POST', headers, revokedata)
         print('撤销成功：', idasd)
@@ -110,7 +110,7 @@ class fee_test01(unittest.TestCase):
 
     # 撤销待结算费用单
     def revoke_tobesettled(self):
-        tobesettledurl = 'https://api.imways.com/mall/fee/my/audit/revoke/unsettled?feeBillNo=' + res['data']
+        tobesettledurl = 'https://api.imways.com/mall/test_cases/my/audit/revoke/unsettled?feeBillNo=' + res['data']
         tobesettled = run.run_main(tobesettledurl, 'POST', headers)
         print('撤销待审核费用单：',  tobesettled)
         # 断言
@@ -118,7 +118,7 @@ class fee_test01(unittest.TestCase):
 
     # 撤销审核不通过费用单
     def revoke_fail(self):
-        failurl = 'https://api.imways.com/mall/fee/my/audit/revoke/rejected?feeBillNo=' + res['data']
+        failurl = 'https://api.imways.com/mall/test_cases/my/audit/revoke/rejected?feeBillNo=' + res['data']
         auditfail = run.run_main(failurl, 'POST', headers)
         print('撤销审核不通过费用单：', auditfail)
         # 断言
@@ -126,7 +126,7 @@ class fee_test01(unittest.TestCase):
 
     # 结算新建费用单
     def fee_settlement(self):
-        settlementurl = 'https://api.imways.com/mall/balance/manage/deposit/fee/pay?feeBillNo=D2020031303677&amount=1&feePaymentMode=ASSET'
+        settlementurl = 'https://api.imways.com/mall/balance/manage/deposit/test_cases/pay?feeBillNo=D2020031303677&amount=1&feePaymentMode=ASSET'
         ui = {'enablePoundage': 'true', 'feePaymentPosType': 'CREDITCARD'}
         settlementdata = {
             'rechargeInfo': {
@@ -175,7 +175,7 @@ class fee_test01(unittest.TestCase):
         print(membershipcard)
         print(len(membershipcard))
         for cardId in membershipcard:
-           if cardId['cardName'] == xym.fee.fee_test_data.fee_one_data.card:
+           if cardId['cardName'] == xym.test_cases.test_fee_data.fee_one_data.card:
                 print('cardId:', cardId['cardId'])
                 break
 
@@ -185,5 +185,3 @@ class fee_test01(unittest.TestCase):
 
         return membershipcard
 
-    print(sjioejf
-    '')

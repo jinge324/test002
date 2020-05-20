@@ -1,12 +1,12 @@
 import json
 import xym.request.myrequests
-import xym.fee.fee_test_data.fee_one_data
+import xym.test_cases.test_fee_data.fee_one_data
 
 class order_qw():
     def iop(self):
         run = xym.request.myrequests.RunMain
-        headers = xym.fee.fee_test_data.fee_one_data.headers
-        payurl = 'https://api.imways.com/mall/electricity/fee/prepay?feePaymentMode=CASH&isCardCharged=1&storeId=8606&degree=&amount=1'
+        headers = xym.test_cases.test_fee_data.fee_one_data.headers
+        payurl = 'https://api.imways.com/mall/electricity/test_cases/prepay?feePaymentMode=CASH&isCardCharged=1&storeId=8606&degree=&amount=1'
         paydata = {
             'entityId': 25,
             'rechargeInfo': {

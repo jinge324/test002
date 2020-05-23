@@ -1,7 +1,7 @@
 import requests
 import json
 
-class runmain:
+class runmain():
     # # 实例初始化
     # def __init__(self, url, method, headers, data=None):
     #     self.res = self.run_main(url, method, headers, data)

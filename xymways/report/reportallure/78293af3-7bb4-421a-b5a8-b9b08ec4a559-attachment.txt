@@ -1,0 +1,2 @@
+新增保证金,费用单storeId与merchantNo不相对应
+{'success': False, 'data': None, 'code': 221003002, 'message': '店铺不存在', 'prompt': 'NORMAL', 'privacy': False}

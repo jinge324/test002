@@ -1,0 +1,2 @@
+新增保证金,传入不相对应的entityId（关联的结算主体）
+{'success': False, 'data': None, 'code': 500, 'message': '系统异常', 'prompt': 'NORMAL', 'privacy': False}

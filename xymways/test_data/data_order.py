@@ -2403,7 +2403,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0'}]
         }
         # 不参加活动，商品都特价，整单打折1000
         billing_four = {
@@ -2427,7 +2427,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '1000'}]
         }
         # 不参加活动，商品都不特价，整单打折1000
         billing_five = {
@@ -2451,7 +2451,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '1000'}]
         }
         # 不参加活动，商品都不特价，整单打折0
         billing_six = {
@@ -2475,7 +2475,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0'}]
         }
         # 不参加活动，服务费特价，整单打折0
         billing_seven = {
@@ -2499,7 +2499,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0'}]
         }
         # 不参加活动，套组特价，整单打折0
         billing_eight = {
@@ -2523,7 +2523,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0'}]
         }
         # 不参加活动，套组特价，整单打折1000
         billing_nine = {
@@ -2547,7 +2547,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '1000'}]
         }
         # 不参加活动，服务费特价，整单打折1000
         billing_ten = {
@@ -2571,7 +2571,7 @@ class order_billing:
             'orderDesc': "南阳全盘西门子灶具",
             'customDTO': {'realName': iop.test_order_user()[1]},
             'memberCardInfoDTO': iop.test_order_card(),
-            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
+            'orderPreferens': [{'preferenType': "3000", 'preferenVal': '1000'}]
         }
         # 不参加活动，服务费特价，整单打折1
         billing_eleven = {
@@ -2622,12 +2622,1558 @@ class order_billing:
             'orderPreferens': [{'preferenType': "3000", 'preferenVal': '0.1'}]
         }
         return billing_one, billing_two, billing_three, billing_four, billing_five, billing_six, billing_seven, billing_eight, billing_nine, billing_ten, billing_eleven, billing_twelve
-
+    # 普通商品整单优惠
     def billings_11():
-        # 不参加活动， 普通商品整单优惠
-        # 不参加活动， 套组商品整单优惠
-        # 不参加活动， 服务费整单优惠
-        # 不参加活动， 普通商品与套组整单优惠
-        # 不参加活动， 普通商品与服务费整单优惠
-        # 不参加活动， 服务费与套组账单优惠
-        return iop
+        # 商品整单优惠到789， 商品不特价
+        billing_one = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 211,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 商品整单优惠到789， 商品特价
+        billing_two = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 211,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 商品整单优惠到0， 商品不特价
+        billing_three = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 1000,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '0'}]
+        }
+        # 商品整单优惠到0， 商品特价
+        billing_four = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 1000,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '0'}]
+        }
+        # 商品整单优惠到比原价大， 商品不特价
+        billing_five = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 10000000, 'salePriceTotal': 10000000,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 1000,
+            'realAmount': 10000000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '10000000'}]
+        }
+        # 商品整单优惠到比原价大， 商品特价
+        billing_six = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 10000000, 'salePriceTotal': 10000000,
+                 'isSpecialPrice': 'ture', 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 1000,
+            'realAmount': 10000000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '10000000'}]
+        }
+        # 商品整单优惠到789， 商品不特价, 添加大于限制的商品备注
+        billing_seven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssa", 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 211,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 商品整单优惠到789， 商品不特价, 添加正常的商品备注
+        billing_eight = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 211,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 商品整单优惠orderPreferens，为空
+        billing_nine = {
+             'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 211,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': []
+        }
+        # 商品整单优惠不传orderPreferens
+        billing_ten = {
+             'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169284", 'orderQty': "1", 'marketPrice': 1000, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "COMMON"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 211,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            # 'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+
+        return billing_one, billing_two, billing_three, billing_four, billing_five, billing_six, billing_seven, billing_eight, billing_nine, billing_ten
+    # 套组商品整单优惠
+    def billings_12():
+        # 套组整单优惠到789， 商品不特价
+        billing_one = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 3311,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 套组整单优惠到789， 商品特价
+        billing_two = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 3311,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 套组整单优惠到0， 商品不特价
+        billing_three = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 4100,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '0'}]
+        }
+        # 套组整单优惠到0， 商品特价
+        billing_four = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 4100,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '0'}]
+        }
+        # 套组整单优惠到比原价大， 商品不特价
+        billing_five = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 10000000,
+                 'salePriceTotal': 10000000,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 4100,
+            'realAmount': 10000000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '10000000'}]
+        }
+        # 套组整单优惠到比原价大， 商品特价
+        billing_six = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 10000000,
+                 'salePriceTotal': 10000000,
+                 'isSpecialPrice': 'ture', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 1000,
+            'discountAmount': 1000,
+            'realAmount': 10000000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '10000000'}]
+        }
+        # 套组整单优惠到789， 商品不特价, 添加大于限制的商品备注
+        billing_seven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false',
+                 'remark': "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssa",
+                 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 3311,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 套组整单优惠到789， 商品不特价, 添加正常的商品备注
+        billing_eight = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 3311,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 套组整单优惠orderPreferens，为空
+        billing_nine = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 3311,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': []
+        }
+        # 套组整单优惠不传orderPreferens
+        billing_ten = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182873", 'orderQty': "1", 'marketPrice': 4100, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 4100,
+            'discountAmount': 3311,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            # 'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+
+        return billing_one, billing_two, billing_three, billing_four, billing_five, billing_six, billing_seven, billing_eight, billing_nine, billing_ten
+    # 服务费整单优惠
+    def billings_13():
+        # 服务费整单优惠到789， 商品不特价
+        billing_one = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 1331,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 服务费整单优惠到789， 商品特价
+        billing_two = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 1331,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 服务费整单优惠到0， 商品不特价
+        billing_three = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 2120,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '0'}]
+        }
+        # 服务费整单优惠到0， 商品特价
+        billing_four = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 2120,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '0'}]
+        }
+        # 服务费整单优惠到比原价大， 商品不特价
+        billing_five = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 10000000,
+                 'salePriceTotal': 10000000,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 2120,
+            'realAmount': 10000000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '10000000'}]
+        }
+        # 服务费整单优惠到比原价大， 商品特价
+        billing_six = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 10000000,
+                 'salePriceTotal': 10000000,
+                 'isSpecialPrice': 'ture', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 2120,
+            'realAmount': 10000000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '10000000'}]
+        }
+        # 服务费整单优惠到789， 商品不特价, 添加大于限制的商品备注
+        billing_seven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false',
+                 'remark': "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssa",
+                 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 1331,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 服务费整单优惠到789， 商品不特价, 添加正常的商品备注
+        billing_eight = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 1331,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+        # 服务费整单优惠orderPreferens，为空
+        billing_nine = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 1331,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': []
+        }
+        # 服务费整单优惠不传orderPreferens
+        billing_ten = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'remark': "ssssss", 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 2120,
+            'discountAmount': 1331,
+            'realAmount': 789,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            # 'orderPreferens': [{'preferenType': "2000", 'preferenVal': '789'}]
+        }
+
+        return billing_one, billing_two, billing_three, billing_four, billing_five, billing_six, billing_seven, billing_eight, billing_nine, billing_ten
+    # 普通商品与套组整单优惠
+    def billings_14():
+        # 不参加活动，商品都特价，整单优惠到10
+        billing_one = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2.66, 'salePriceTotal': 2.66,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 7.34, 'salePriceTotal': 7.34,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到10
+        billing_two = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2.66, 'salePriceTotal': 2.66,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 7.34, 'salePriceTotal': 7.34,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，商品都特价，整单优惠到0
+        billing_three = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，商品都特价，整单优惠到100000
+        billing_four = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 21000, 'salePriceTotal': 21000,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 58000, 'salePriceTotal': 58000,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到100000
+        billing_five = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 21000, 'salePriceTotal': 21000,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 58000, 'salePriceTotal': 58000,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到0
+        billing_six = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，普通特价，整单优惠到0
+        billing_seven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'ture', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，套组特价，整单优惠到0
+        billing_eight = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'ture', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，套组特价，整单优惠到10000
+        billing_nine = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2100, 'salePriceTotal': 2100,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 58000, 'salePriceTotal': 58000,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，普通特价，整单优惠到1000
+        billing_ten = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 21000, 'salePriceTotal': 21000,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 5800, 'salePriceTotal': 5800,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，普通特价，整单优惠到10
+        billing_eleven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2100, 'salePriceTotal': 2100,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': -2090, 'salePriceTotal': -2090,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，套组特价，整单优惠到10
+        billing_twelve = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': '-5700', 'salePriceTotal': '-5700',
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 5800, 'salePriceTotal': 5800,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        return billing_one, billing_two, billing_three, billing_four, billing_five, billing_six, billing_seven, billing_eight, billing_nine, billing_ten, billing_eleven, billing_twelve
+    # 普通商品与服务费整单优惠
+    def billings_15():
+        # 不参加活动，商品都特价，整单优惠到10
+        billing_one = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2.66, 'salePriceTotal': 2.66,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到10
+        billing_two = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2.66, 'salePriceTotal': 2.66,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，商品都特价，整单优惠到0
+        billing_three = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，商品都特价，整单优惠到100000
+        billing_four = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 21000, 'salePriceTotal': 21000,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到100000
+        billing_five = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 21000, 'salePriceTotal': 21000,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到0
+        billing_six = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}
+            ],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，普通特价，整单优惠到0
+        billing_seven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'ture', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，服务费特价，整单优惠到0
+        billing_eight = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，服务费特价，整单优惠到10000
+        billing_nine = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2100, 'salePriceTotal': 2100,
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，普通特价，整单优惠到1000
+        billing_ten = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 21000, 'salePriceTotal': 21000,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，普通特价，整单优惠到10
+        billing_eleven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': 2100, 'salePriceTotal': 2100,
+                 'isSpecialPrice': 'true', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，服务费特价，整单优惠到10
+        billing_twelve = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "169286", 'orderQty': "1", 'marketPrice': 2100, 'salePrice': '-5700', 'salePriceTotal': '-5700',
+                 'isSpecialPrice': 'false', 'goodsClass': "COMMON"},
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        return billing_one, billing_two, billing_three, billing_four, billing_five, billing_six, billing_seven, billing_eight, billing_nine, billing_ten, billing_eleven, billing_twelve
+    # 服务费与套组账单优惠
+    def billings_16():
+        # 不参加活动，商品都特价，整单优惠到10
+        billing_one = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 7.34, 'salePriceTotal': 7.34,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到10
+        billing_two = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 7.34, 'salePriceTotal': 7.34,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，商品都特价，整单优惠到0
+        billing_three = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，商品都特价，整单优惠到100000
+        billing_four = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 58000, 'salePriceTotal': 58000,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到100000
+        billing_five = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 58000, 'salePriceTotal': 58000,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，商品都不特价，整单优惠到0
+        billing_six = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，服务费特价，整单优惠到0
+        billing_seven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，套组特价，整单优惠到0
+        billing_eight = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 0, 'salePriceTotal': 0,
+                 'isSpecialPrice': 'ture', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 0,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '0'}]
+        }
+        # 不参加活动，套组特价，整单优惠到10000
+        billing_nine = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 58000, 'salePriceTotal': 58000,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，服务费特价，整单优惠到1000
+        billing_ten = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 5800, 'salePriceTotal': 5800,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7900,
+            'realAmount': 10000,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10000'}]
+        }
+        # 不参加活动，服务费特价，整单优惠到10
+        billing_eleven = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'true', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': -2090, 'salePriceTotal': -2090,
+                 'isSpecialPrice': 'false', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        # 不参加活动，套组特价，整单优惠到10
+        billing_twelve = {
+            'orderType': "1003",
+            'customId': iop.test_order_user()[0],
+            'orderGoods': [
+                {'goodsId': "182889", 'orderQty': "1", 'marketPrice': 2120, 'salePrice': 789, 'salePriceTotal': 789,
+                 'isSpecialPrice': 'false', 'goodsClass': "SERVICE_FEE"},
+                {'goodsId': "182867", 'orderQty': "1", 'marketPrice': 5800, 'salePrice': 5800, 'salePriceTotal': 5800,
+                 'isSpecialPrice': 'true', 'goodsClass': "SET"}],
+            'orderExts': [{'key': "needDelivery", 'value': 1},
+                          {'key': "expectedCompleteDate", 'value': timeStamp.time_stamp()},
+                          {'key': "orderInvoice", 'value': 1}, {'key': "customizedImage",
+                                                                'value': "order/attach/66/4284/5630/20200518/4047af48-9f23-9cbe-7303-5dcf49ef6725"},
+                          {'key': "addDesignerFriend", 'value': 0}, {'key': "preliminaryAuditFlag", 'value': 1}],
+            'addressId': iop.test_order_address(),
+            'originalAmount': 7900,
+            'discountAmount': 7890,
+            'realAmount': 10,
+            'remark': "南阳全盘西门子灶具",
+            'orderDesc': "南阳全盘西门子灶具",
+            'customDTO': {'realName': iop.test_order_user()[1]},
+            'memberCardInfoDTO': iop.test_order_card(),
+            'orderPreferens': [{'preferenType': "200", 'preferenVal': '10'}]
+        }
+        return billing_one, billing_two, billing_three, billing_four, billing_five, billing_six, billing_seven, billing_eight, billing_nine, billing_ten, billing_eleven, billing_twelve
+

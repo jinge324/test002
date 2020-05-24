@@ -1,0 +1,2 @@
+套组商品整单优惠到0， 商品特价
+{'success': False, 'data': None, 'code': 251000010, 'message': '实际金额不可小于1', 'prompt': 'TOAST', 'privacy': False}

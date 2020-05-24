@@ -1,0 +1,80 @@
+{
+  "uid" : "f16bc4c2f0385692",
+  "name" : "test_add_bond_06",
+  "fullName" : "test_case.test_fee_01.Testfee#test_add_bond_06",
+  "historyId" : "2a5d08457ff29b9aac498226ae5c65d8",
+  "time" : {
+    "start" : 1590316138624,
+    "stop" : 1590316153926,
+    "duration" : 15302
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 200 != 200",
+  "statusTrace" : "self = <test_fee_01.Testfee object at 0x000001E73E246A20>\n\n    def test_add_bond_06(self):\n        print('新增保证金,费用单金额小于0.01')\n        url = 'http://api.xymtest.com/mall/fee/my/create/fee'\n        data = testdata.add_bond()[5]\n        res = run.run_main(url, 'POST', headers_market, json.dumps(data))\n>       assert res['code'] != 200\nE       assert 200 != 200\n\n..\\test_case\\test_fee_01.py:119: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 200 != 200",
+    "statusTrace" : "self = <test_fee_01.Testfee object at 0x000001E73E246A20>\n\n    def test_add_bond_06(self):\n        print('新增保证金,费用单金额小于0.01')\n        url = 'http://api.xymtest.com/mall/fee/my/create/fee'\n        data = testdata.add_bond()[5]\n        res = run.run_main(url, 'POST', headers_market, json.dumps(data))\n>       assert res['code'] != 200\nE       assert 200 != 200\n\n..\\test_case\\test_fee_01.py:119: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8b8ea445b613fac0",
+      "name" : "stdout",
+      "source" : "8b8ea445b613fac0.txt",
+      "type" : "text/plain",
+      "size" : 42
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_fee_01"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testfee"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-18EISHC"
+  }, {
+    "name" : "thread",
+    "value" : "37436-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_fee_01"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f16bc4c2f0385692.json",
+  "parameterValues" : [ ]
+}

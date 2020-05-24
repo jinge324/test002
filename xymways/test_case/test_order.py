@@ -881,7 +881,7 @@ class Test_Billings():
         print(prequalificationorder)
         assert prequalificationorder['code'] == 200
         return prequalificationorder
-        # '''
+
     # 普通商品与套组整单打折
     def test_prequalification_83(self):
         print('不参加活动，商品都特价，整单打折1')
@@ -961,7 +961,7 @@ class Test_Billings():
                                              json.dumps(prequalificationdata))
         # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
         print(prequalificationorder)
-        assert prequalificationorder['code'] == 251000010
+        assert prequalificationorder['code'] != 200
         return prequalificationorder
     def test_prequalification_91(self):
         print('不参加活动，套组特价，整单打折1000')
@@ -1124,9 +1124,677 @@ class Test_Billings():
         print(prequalificationorder)
         assert prequalificationorder['code'] == 200
         return prequalificationorder
+    # 普通商品整单优惠
+    def test_prequalification_107(self):
+        print('商品整单优惠到789， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[0]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_108(self):
+        print('商品整单优惠到789， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[1]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_109(self):
+        print('商品整单优惠到0， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[2]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_110(self):
+        print('商品整单优惠到0， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[3]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_111(self):
+        print('商品整单优惠到比原价大， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[4]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_112(self):
+        print('商品整单优惠到比原价大， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[5]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_113(self):
+        print('商品整单优惠到789， 商品不特价, 添加大于限制的商品备注')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[6]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_114(self):
+        print('商品整单优惠到789， 商品不特价, 添加正常的商品备注')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[7]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_115(self):
+        print('商品整单优惠orderPreferens，为空')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[8]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_116(self):
+        print('商品整单优惠不传orderPreferens')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_11()[9]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
 
+    # 套组商品整单优惠
+    def test_prequalification_117(self):
+        print('套组商品整单优惠到789， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[0]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_118(self):
+        print('套组商品整单优惠到789， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[1]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_119(self):
+        print('套组商品整单优惠到0， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[2]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_120(self):
+        print('套组商品整单优惠到0， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[3]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_121(self):
+        print('套组商品整单优惠到比原价大， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[4]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_122(self):
+        print('套组商品整单优惠到比原价大， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[5]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_123(self):
+        print('套组商品整单优惠到789， 商品不特价, 添加大于限制的商品备注')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[6]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_124(self):
+        print('套组商品整单优惠到789， 商品不特价, 添加正常的商品备注')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[7]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_125(self):
+        print('套组商品整单优惠orderPreferens，为空')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[8]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_126(self):
+        print('套组商品整单优惠不传orderPreferens')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_12()[9]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
 
+    # 服务费商品整单优惠
+    def test_prequalification_127(self):
+        print('套组整单优惠到789， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[0]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_128(self):
+        print('服务费整单优惠到789， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[1]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_129(self):
+        print('服务费商品整单优惠到0， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[2]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_130(self):
+        print('服务费商品整单优惠到0， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[3]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_131(self):
+        print('服务费商品整单优惠到比原价大， 商品不特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[4]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_132(self):
+        print('服务费商品整单优惠到比原价大， 商品特价')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[5]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_133(self):
+        print('服务费商品整单优惠到789， 商品不特价, 添加大于限制的商品备注')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[6]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_134(self):
+        print('服务费商品整单优惠到789， 商品不特价, 添加正常的商品备注')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[7]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_135(self):
+        print('服务费商品整单优惠orderPreferens，为空')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[8]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_136(self):
+        print('服务费商品整单优惠不传orderPreferens')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_13()[9]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
 
+    # 普通商品与套组整单优惠
+    def test_prequalification_137(self):
+        print('不参加活动，商品都特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[0]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 500
+        return prequalificationorder
+    def test_prequalification_138(self):
+        print('不参加活动，商品都不特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[1]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_139(self):
+        print('不参加活动，商品都特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[2]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_140(self):
+        print('不参加活动，商品都特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[3]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 500
+        return prequalificationorder
+    def test_prequalification_141(self):
+        print('不参加活动，商品都不特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[4]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_142(self):
+        print('不参加活动，商品都不特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[5]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_143(self):
+        print('不参加活动，普通特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[6]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_144(self):
+        print('不参加活动，套组特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[7]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_145(self):
+        print('不参加活动，套组特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[8]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_146(self):
+        print('不参加活动，普通特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[9]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_147(self):
+        print('不参加活动，套组特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[10]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_148(self):
+        print('不参加活动，普通特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_14()[11]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    # '''
+    # 普通商品与服务费整单优惠
+    def test_prequalification_149(self):
+        print('不参加活动，商品都特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[0]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 500
+        return prequalificationorder
+    def test_prequalification_150(self):
+        print('不参加活动，商品都不特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[1]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_151(self):
+        print('不参加活动，商品都特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[2]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_152(self):
+        print('不参加活动，商品都特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[3]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 500
+        return prequalificationorder
+    def test_prequalification_153(self):
+        print('不参加活动，商品都不特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[4]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_154(self):
+        print('不参加活动，商品都不特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[5]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_155(self):
+        print('不参加活动，普通特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[6]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_156(self):
+        print('不参加活动，服务费特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[7]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_157(self):
+        print('不参加活动，服务费特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[8]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_158(self):
+        print('不参加活动，普通特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[9]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_159(self):
+        print('不参加活动，服务费特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[10]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_160(self):
+        print('不参加活动，普通特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_15()[11]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+
+    # 服务费与套组账单优惠
+    def test_prequalification_161(self):
+        print('不参加活动，商品都特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[0]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 500
+        return prequalificationorder
+    def test_prequalification_162(self):
+        print('不参加活动，商品都不特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[1]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_163(self):
+        print('不参加活动，商品都特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[2]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_164(self):
+        print('不参加活动，商品都特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[3]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 500
+        return prequalificationorder
+    def test_prequalification_165(self):
+        print('不参加活动，商品都不特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[4]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_166(self):
+        print('不参加活动，商品都不特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[5]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 251000010
+        return prequalificationorder
+    def test_prequalification_167(self):
+        print('不参加活动，服务费特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[6]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_168(self):
+        print('不参加活动，套组特价，整单优惠到0')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[7]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] != 200
+        return prequalificationorder
+    def test_prequalification_169(self):
+        print('不参加活动，套组特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[8]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_170(self):
+        print('不参加活动，服务费特价，整单优惠到10000')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[9]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_171(self):
+        print('不参加活动，套组特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[10]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
+    def test_prequalification_172(self):
+        print('不参加活动，服务为特价，整单优惠到10')
+        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'
+        prequalificationdata = xymways.test_data.data_order.order_billing.billings_16()[11]
+        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,
+                                             json.dumps(prequalificationdata))
+        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder['code'])
+        print(prequalificationorder)
+        assert prequalificationorder['code'] == 200
+        return prequalificationorder
 
 
 # 订单查询
@@ -1165,7 +1833,7 @@ class Test_order_query():
             ordernos.append(queryorder[conid]['orderNo'])
         print(ordernos)
         return ordernos
-    #'''
+    # '''
     # 查询商户待预审订单
     def test_query_order_tbprequal(self):
         print('测试查询商户待预审订单')
@@ -1335,7 +2003,7 @@ class Test_order_query():
         for conid in range(0, len(queryorder)):
             ordernos.append(queryorder[conid]['orderNo'])
         return ordernos
-    #'''
+    # '''
     # 取消商户全部待支付订单(时间段之内)
     def test_paid(self):
         iop = Test_order_query().test_query_order_tbpaid()

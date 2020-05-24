@@ -1,2 +1,0 @@
-002开单商品收货，但不填写收货地址
-{'success': True, 'data': {'code': '1000', 'orderNo': '2005240660098635', 'orderId': 7370, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

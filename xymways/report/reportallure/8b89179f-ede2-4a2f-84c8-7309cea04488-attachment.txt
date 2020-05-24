@@ -1,2 +1,0 @@
-新增保证金不添加备注
-{'success': True, 'data': 'D2020052400001', 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

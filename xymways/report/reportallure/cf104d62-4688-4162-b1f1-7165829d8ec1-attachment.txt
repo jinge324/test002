@@ -1,0 +1,2 @@
+不参加活动,不需送货，单个普通商品开单
+{'success': True, 'data': {'code': '1000', 'orderNo': '2005240660251683', 'orderId': 7523, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

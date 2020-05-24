@@ -1,0 +1,2 @@
+不参加活动，商品都特价，整单优惠到0
+{'success': False, 'data': None, 'code': 251000010, 'message': '实际金额不可小于1', 'prompt': 'TOAST', 'privacy': False}

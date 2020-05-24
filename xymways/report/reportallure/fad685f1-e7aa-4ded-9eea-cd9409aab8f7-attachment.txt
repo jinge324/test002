@@ -1,0 +1,2 @@
+不参加活动，普通特价，整单优惠到0
+{'success': False, 'data': None, 'code': 500, 'message': '系统异常', 'prompt': 'NORMAL', 'privacy': False}

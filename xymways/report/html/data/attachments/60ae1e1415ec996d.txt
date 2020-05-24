@@ -1,0 +1,2 @@
+不参加活动，服务特价，整单打折0
+{'success': False, 'data': None, 'code': 251000010, 'message': '实际金额不可小于1', 'prompt': 'TOAST', 'privacy': False}

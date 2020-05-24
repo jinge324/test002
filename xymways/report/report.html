@@ -243,7 +243,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 24-May-2020 at 03:43:02 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 24-May-2020 at 18:50:19 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -262,8 +262,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.0</td></tr></table>
     <h2>Summary</h2>
-    <p>152 tests ran in 876.58 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">142 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">10 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>218 tests ran in 1375.41 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">209 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">9 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -278,115 +278,104 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_06</td>
-          <td class="col-duration">10.87</td>
+          <td class="col-duration">15.30</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_fee_01.Testfee object at 0x00000223CF26FF28&gt;<br/><br/>    def test_add_bond_06(self):<br/>        print(&#x27;新增保证金,费用单金额小于0.01&#x27;)<br/>        url = &#x27;http://api.xymtest.com/mall/fee/my/create/fee&#x27;<br/>        data = testdata.add_bond()[5]<br/>        res = run.run_main(url, &#x27;POST&#x27;, headers_market, json.dumps(data))<br/>&gt;       assert res[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_fee_01.py:119: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>新增保证金,费用单金额小于0.01
+            <div class="log">self = &lt;test_fee_01.Testfee object at 0x000001E73E246A20&gt;<br/><br/>    def test_add_bond_06(self):<br/>        print(&#x27;新增保证金,费用单金额小于0.01&#x27;)<br/>        url = &#x27;http://api.xymtest.com/mall/fee/my/create/fee&#x27;<br/>        data = testdata.add_bond()[5]<br/>        res = run.run_main(url, &#x27;POST&#x27;, headers_market, json.dumps(data))<br/>&gt;       assert res[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_fee_01.py:119: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>新增保证金,费用单金额小于0.01
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_07</td>
-          <td class="col-duration">11.85</td>
+          <td class="col-duration">15.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_fee_01.Testfee object at 0x00000223CF29AC50&gt;<br/><br/>    def test_add_bond_07(self):<br/>        print(&#x27;新增保证金,费用单storeId与merchantNo不相对应&#x27;)<br/>        url = &#x27;http://api.xymtest.com/mall/fee/my/create/fee&#x27;<br/>        data = testdata.add_bond()[6]<br/>        res = run.run_main(url, &#x27;POST&#x27;, headers_market, json.dumps(data))<br/>&gt;       assert res[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_fee_01.py:126: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>新增保证金,费用单storeId与merchantNo不相对应
+            <div class="log">self = &lt;test_fee_01.Testfee object at 0x000001E73E24A5F8&gt;<br/><br/>    def test_add_bond_07(self):<br/>        print(&#x27;新增保证金,费用单storeId与merchantNo不相对应&#x27;)<br/>        url = &#x27;http://api.xymtest.com/mall/fee/my/create/fee&#x27;<br/>        data = testdata.add_bond()[6]<br/>        res = run.run_main(url, &#x27;POST&#x27;, headers_market, json.dumps(data))<br/>&gt;       assert res[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_fee_01.py:126: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>新增保证金,费用单storeId与merchantNo不相对应
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_002</td>
-          <td class="col-duration">5.89</td>
+          <td class="col-duration">6.57</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF273898&gt;<br/><br/>    def test_prequalification_002(self):<br/>        print(&#x27;002开单商品收货，但不填写收货地址&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[1]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请添加送货地址&#x27;<br/><span class="error">E       AssertionError: assert &#x27;请求成功&#x27; == &#x27;请添加送货地址&#x27;</span><br/><span class="error">E         - 请求成功</span><br/><span class="error">E         + 请添加送货地址</span><br/><br/>..\test_case\test_order.py:89: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>002开单商品收货，但不填写收货地址
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660100720&#x27;, &#x27;orderId&#x27;: 7372, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+            <div class="log">self = &lt;test_order.Test_Billings object at 0x000001E73E1F87F0&gt;<br/><br/>    def test_prequalification_002(self):<br/>        print(&#x27;002开单商品收货，但不填写收货地址&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[1]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请添加送货地址&#x27;<br/><span class="error">E       AssertionError: assert &#x27;请求成功&#x27; == &#x27;请添加送货地址&#x27;</span><br/><span class="error">E         - 请求成功</span><br/><span class="error">E         + 请添加送货地址</span><br/><br/>..\test_case\test_order.py:89: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>002开单商品收货，但不填写收货地址
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660248351&#x27;, &#x27;orderId&#x27;: 7520, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_004</td>
-          <td class="col-duration">5.48</td>
+          <td class="col-duration">5.98</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF3E1630&gt;<br/><br/>    def test_prequalification_004(self):<br/>        print(&#x27;004没有用户开单&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[3]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=&#x27;请填写购货人信息&#x27;, passvalue=prequalificationorder[&#x27;message&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请填写购货人信息&#x27;<br/><span class="error">E       AssertionError: assert &#x27;系统异常&#x27; == &#x27;请填写购货人信息&#x27;</span><br/><span class="error">E         - 系统异常</span><br/><span class="error">E         + 请填写购货人信息</span><br/><br/>..\test_case\test_order.py:108: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>004没有用户开单
+            <div class="log">self = &lt;test_order.Test_Billings object at 0x000001E73E0DADD8&gt;<br/><br/>    def test_prequalification_004(self):<br/>        print(&#x27;004没有用户开单&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[3]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=&#x27;请填写购货人信息&#x27;, passvalue=prequalificationorder[&#x27;message&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请填写购货人信息&#x27;<br/><span class="error">E       AssertionError: assert &#x27;系统异常&#x27; == &#x27;请填写购货人信息&#x27;</span><br/><span class="error">E         - 系统异常</span><br/><span class="error">E         + 请填写购货人信息</span><br/><br/>..\test_case\test_order.py:108: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>004没有用户开单
 {&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_005</td>
-          <td class="col-duration">5.22</td>
+          <td class="col-duration">5.77</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF42E160&gt;<br/><br/>    def test_prequalification_005(self):<br/>        print(&#x27;005用户没有会员卡开单&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[4]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=&#x27;请选择会员卡&#x27;, passvalue=prequalificationorder[&#x27;message&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请选择会员卡&#x27;<br/><span class="error">E       AssertionError: assert &#x27;系统异常&#x27; == &#x27;请选择会员卡&#x27;</span><br/><span class="error">E         - 系统异常</span><br/><span class="error">E         + 请选择会员卡</span><br/><br/>..\test_case\test_order.py:118: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>005用户没有会员卡开单
+            <div class="log">self = &lt;test_order.Test_Billings object at 0x000001E73E4711D0&gt;<br/><br/>    def test_prequalification_005(self):<br/>        print(&#x27;005用户没有会员卡开单&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[4]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=&#x27;请选择会员卡&#x27;, passvalue=prequalificationorder[&#x27;message&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请选择会员卡&#x27;<br/><span class="error">E       AssertionError: assert &#x27;系统异常&#x27; == &#x27;请选择会员卡&#x27;</span><br/><span class="error">E         - 系统异常</span><br/><span class="error">E         + 请选择会员卡</span><br/><br/>..\test_case\test_order.py:118: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>005用户没有会员卡开单
 {&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_006</td>
-          <td class="col-duration">5.00</td>
+          <td class="col-duration">5.56</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF2F9160&gt;<br/><br/>    def test_prequalification_006(self):<br/>        print(&#x27;006开单用户没有顾客姓名&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[5]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=&#x27;请填写顾客姓名&#x27;, passvalue=prequalificationorder[&#x27;message&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请填写顾客姓名&#x27;<br/><span class="error">E       AssertionError: assert &#x27;系统异常&#x27; == &#x27;请填写顾客姓名&#x27;</span><br/><span class="error">E         - 系统异常</span><br/><span class="error">E         + 请填写顾客姓名</span><br/><br/>..\test_case\test_order.py:128: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>006开单用户没有顾客姓名
+            <div class="log">self = &lt;test_order.Test_Billings object at 0x000001E73E3955F8&gt;<br/><br/>    def test_prequalification_006(self):<br/>        print(&#x27;006开单用户没有顾客姓名&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[5]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=&#x27;请填写顾客姓名&#x27;, passvalue=prequalificationorder[&#x27;message&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;message&#x27;] == &#x27;请填写顾客姓名&#x27;<br/><span class="error">E       AssertionError: assert &#x27;系统异常&#x27; == &#x27;请填写顾客姓名&#x27;</span><br/><span class="error">E         - 系统异常</span><br/><span class="error">E         + 请填写顾客姓名</span><br/><br/>..\test_case\test_order.py:128: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>006开单用户没有顾客姓名
 {&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_009</td>
-          <td class="col-duration">5.52</td>
+          <td class="col-duration">6.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF385320&gt;<br/><br/>    def test_prequalification_009(self):<br/>        print(&#x27;009订单用其它店铺商品开单&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[8]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=500, passvalue=prequalificationorder[&#x27;code&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;code&#x27;] == 500<br/><span class="error">E       assert 200 == 500</span><br/><br/>..\test_case\test_order.py:158: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>009订单用其它店铺商品开单
+            <div class="log">self = &lt;test_order.Test_Billings object at 0x000001E73E4E85F8&gt;<br/><br/>    def test_prequalification_009(self):<br/>        print(&#x27;009订单用其它店铺商品开单&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[8]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=500, passvalue=prequalificationorder[&#x27;code&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;code&#x27;] == 500<br/><span class="error">E       assert 200 == 500</span><br/><br/>..\test_case\test_order.py:158: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>009订单用其它店铺商品开单
 {&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;3000&#x27;, &#x27;data&#x27;: [169348]}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_71</td>
-          <td class="col-duration">7.70</td>
+          <td class="col-duration">6.89</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF3BE128&gt;<br/><br/>    def test_prequalification_71(self):<br/>        print(&#x27;不参加活动，商品都特价，整单打折1&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_08()[0]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder[&#x27;code&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_order.py:772: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660157288&#x27;, &#x27;orderId&#x27;: 7429, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+            <div class="log">self = &lt;test_order.Test_Billings object at 0x000001E73E2BE2B0&gt;<br/><br/>    def test_prequalification_71(self):<br/>        print(&#x27;不参加活动，商品都特价，整单打折1&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_08()[0]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder[&#x27;code&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_order.py:772: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660305312&#x27;, &#x27;orderId&#x27;: 7577, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_74</td>
-          <td class="col-duration">6.08</td>
+          <td class="col-duration">6.72</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF580BA8&gt;<br/><br/>    def test_prequalification_74(self):<br/>        print(&#x27;不参加活动，商品都特价，整单打折1000&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_08()[3]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder[&#x27;code&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_order.py:802: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660159254&#x27;, &#x27;orderId&#x27;: 7431, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_90</td>
-          <td class="col-duration">6.12</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_order.Test_Billings object at 0x00000223CF403198&gt;<br/><br/>    def test_prequalification_90(self):<br/>        print(&#x27;不参加活动，套组特价，整单打折0&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_09()[7]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder[&#x27;code&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;code&#x27;] == 251000010<br/><span class="error">E       assert 500 == 251000010</span><br/><br/>..\test_case\test_order.py:964: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单打折0
-{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+            <div class="log">self = &lt;test_order.Test_Billings object at 0x000001E73E7A0A20&gt;<br/><br/>    def test_prequalification_74(self):<br/>        print(&#x27;不参加活动，商品都特价，整单打折1000&#x27;)<br/>        prequalificationurl = &#x27;http://api.xymtest.com/merchant/store/order/open/create&#x27;<br/>        prequalificationdata = xymways.test_data.data_order.order_billing.billings_08()[3]<br/>        prequalificationorder = run.run_main(prequalificationurl, &#x27;POST&#x27;, header_merchant,<br/>                                             json.dumps(prequalificationdata))<br/>        # assertion.assertions(self, contrast=200, passvalue=prequalificationorder[&#x27;code&#x27;])<br/>        print(prequalificationorder)<br/>&gt;       assert prequalificationorder[&#x27;code&#x27;] != 200<br/><span class="error">E       assert 200 != 200</span><br/><br/>..\test_case\test_order.py:802: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660307237&#x27;, &#x27;orderId&#x27;: 7579, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_storeId</td>
-          <td class="col-duration">0.25</td>
+          <td class="col-duration">1.19</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -395,7 +384,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_settlement</td>
-          <td class="col-duration">0.46</td>
+          <td class="col-duration">0.93</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -404,7 +393,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_expenseitem</td>
-          <td class="col-duration">0.25</td>
+          <td class="col-duration">1.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -413,7 +402,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_feeitem</td>
-          <td class="col-duration">0.35</td>
+          <td class="col-duration">1.29</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -422,7 +411,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_feeiten</td>
-          <td class="col-duration">0.57</td>
+          <td class="col-duration">1.34</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -431,18 +420,18 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_01</td>
-          <td class="col-duration">14.03</td>
+          <td class="col-duration">21.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>新增保证金不添加备注
-{&#x27;success&#x27;: True, &#x27;data&#x27;: &#x27;D2020052400004&#x27;, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: &#x27;D2020052400007&#x27;, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_02</td>
-          <td class="col-duration">10.98</td>
+          <td class="col-duration">17.98</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -453,7 +442,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_03</td>
-          <td class="col-duration">13.61</td>
+          <td class="col-duration">18.21</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -464,7 +453,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_04</td>
-          <td class="col-duration">13.80</td>
+          <td class="col-duration">14.59</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -475,7 +464,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_05</td>
-          <td class="col-duration">12.06</td>
+          <td class="col-duration">14.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -486,7 +475,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_08</td>
-          <td class="col-duration">13.77</td>
+          <td class="col-duration">11.51</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -497,7 +486,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_09</td>
-          <td class="col-duration">11.78</td>
+          <td class="col-duration">14.43</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -508,7 +497,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_fee_01.py::Testfee::test_add_bond_10</td>
-          <td class="col-duration">11.30</td>
+          <td class="col-duration">14.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -519,24 +508,6 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order::test_order_user</td>
-          <td class="col-duration">0.26</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_order.py::Test_order::test_order_address</td>
-          <td class="col-duration">0.12</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">test_case/test_order.py::Test_order::test_order_card</td>
           <td class="col-duration">0.16</td>
           <td class="col-links"></td></tr>
         <tr>
@@ -545,8 +516,26 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_order::test_order_address</td>
+          <td class="col-duration">0.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_order::test_order_card</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order::test_activities</td>
-          <td class="col-duration">0.34</td>
+          <td class="col-duration">0.56</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -555,7 +544,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_001</td>
-          <td class="col-duration">5.22</td>
+          <td class="col-duration">5.94</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -566,18 +555,18 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_003</td>
-          <td class="col-duration">5.78</td>
+          <td class="col-duration">6.54</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>003开单不收货，单填写收货地址
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660101287&#x27;, &#x27;orderId&#x27;: 7373, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660249105&#x27;, &#x27;orderId&#x27;: 7521, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_007</td>
-          <td class="col-duration">5.16</td>
+          <td class="col-duration">5.86</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -588,7 +577,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_008</td>
-          <td class="col-duration">5.22</td>
+          <td class="col-duration">5.60</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -599,7 +588,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_010</td>
-          <td class="col-duration">5.78</td>
+          <td class="col-duration">4.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -610,7 +599,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_011</td>
-          <td class="col-duration">5.21</td>
+          <td class="col-duration">5.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -621,7 +610,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_012</td>
-          <td class="col-duration">5.22</td>
+          <td class="col-duration">6.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -632,18 +621,18 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_01</td>
-          <td class="col-duration">5.40</td>
+          <td class="col-duration">4.80</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动,不需送货，单个普通商品开单
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660103944&#x27;, &#x27;orderId&#x27;: 7375, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660251683&#x27;, &#x27;orderId&#x27;: 7523, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_02</td>
-          <td class="col-duration">5.31</td>
+          <td class="col-duration">5.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -653,7 +642,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_03</td>
-          <td class="col-duration">5.67</td>
+          <td class="col-duration">6.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -663,7 +652,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_04</td>
-          <td class="col-duration">5.47</td>
+          <td class="col-duration">5.99</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -673,7 +662,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_05</td>
-          <td class="col-duration">5.48</td>
+          <td class="col-duration">6.45</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -683,7 +672,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_06</td>
-          <td class="col-duration">5.47</td>
+          <td class="col-duration">6.29</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -693,7 +682,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_07</td>
-          <td class="col-duration">5.53</td>
+          <td class="col-duration">6.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -703,7 +692,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_08</td>
-          <td class="col-duration">5.74</td>
+          <td class="col-duration">6.31</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -713,7 +702,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_09</td>
-          <td class="col-duration">5.36</td>
+          <td class="col-duration">6.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -723,7 +712,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_10</td>
-          <td class="col-duration">5.54</td>
+          <td class="col-duration">6.48</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -733,7 +722,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_11</td>
-          <td class="col-duration">5.45</td>
+          <td class="col-duration">5.98</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -743,7 +732,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_12</td>
-          <td class="col-duration">5.57</td>
+          <td class="col-duration">6.16</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -753,7 +742,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_13</td>
-          <td class="col-duration">5.02</td>
+          <td class="col-duration">5.30</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -763,7 +752,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_14</td>
-          <td class="col-duration">4.75</td>
+          <td class="col-duration">5.49</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -773,7 +762,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_15</td>
-          <td class="col-duration">4.89</td>
+          <td class="col-duration">5.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -783,7 +772,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_16</td>
-          <td class="col-duration">4.77</td>
+          <td class="col-duration">5.23</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -793,7 +782,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_17</td>
-          <td class="col-duration">5.29</td>
+          <td class="col-duration">6.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -803,7 +792,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_18</td>
-          <td class="col-duration">5.35</td>
+          <td class="col-duration">5.91</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -813,7 +802,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_19</td>
-          <td class="col-duration">5.43</td>
+          <td class="col-duration">5.94</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -823,7 +812,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_20</td>
-          <td class="col-duration">5.62</td>
+          <td class="col-duration">5.97</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -833,7 +822,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_21</td>
-          <td class="col-duration">5.58</td>
+          <td class="col-duration">6.89</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -843,7 +832,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_22</td>
-          <td class="col-duration">5.52</td>
+          <td class="col-duration">6.28</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -853,7 +842,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_23</td>
-          <td class="col-duration">5.12</td>
+          <td class="col-duration">5.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -863,7 +852,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_24</td>
-          <td class="col-duration">5.01</td>
+          <td class="col-duration">5.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -873,7 +862,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_25</td>
-          <td class="col-duration">4.64</td>
+          <td class="col-duration">5.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -883,7 +872,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_26</td>
-          <td class="col-duration">4.79</td>
+          <td class="col-duration">5.35</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -893,7 +882,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_27</td>
-          <td class="col-duration">5.71</td>
+          <td class="col-duration">6.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -903,7 +892,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_28</td>
-          <td class="col-duration">5.36</td>
+          <td class="col-duration">6.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -913,7 +902,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_29</td>
-          <td class="col-duration">5.61</td>
+          <td class="col-duration">6.42</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -923,7 +912,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_30</td>
-          <td class="col-duration">5.45</td>
+          <td class="col-duration">6.70</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -933,7 +922,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_31</td>
-          <td class="col-duration">5.66</td>
+          <td class="col-duration">6.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -943,7 +932,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_32</td>
-          <td class="col-duration">5.51</td>
+          <td class="col-duration">5.83</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -953,7 +942,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_33</td>
-          <td class="col-duration">4.69</td>
+          <td class="col-duration">5.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -963,7 +952,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_34</td>
-          <td class="col-duration">4.60</td>
+          <td class="col-duration">5.23</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -973,7 +962,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_35</td>
-          <td class="col-duration">4.98</td>
+          <td class="col-duration">5.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -983,7 +972,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_36</td>
-          <td class="col-duration">4.64</td>
+          <td class="col-duration">5.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -993,7 +982,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_37</td>
-          <td class="col-duration">5.18</td>
+          <td class="col-duration">5.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1003,7 +992,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_38</td>
-          <td class="col-duration">5.51</td>
+          <td class="col-duration">6.05</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1013,7 +1002,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_39</td>
-          <td class="col-duration">5.54</td>
+          <td class="col-duration">6.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1023,7 +1012,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_40</td>
-          <td class="col-duration">5.50</td>
+          <td class="col-duration">6.14</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1033,7 +1022,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_41</td>
-          <td class="col-duration">5.43</td>
+          <td class="col-duration">6.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1043,7 +1032,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_42</td>
-          <td class="col-duration">5.47</td>
+          <td class="col-duration">5.80</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1053,7 +1042,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_43</td>
-          <td class="col-duration">5.14</td>
+          <td class="col-duration">5.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1063,7 +1052,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_44</td>
-          <td class="col-duration">4.63</td>
+          <td class="col-duration">5.04</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1073,7 +1062,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_45</td>
-          <td class="col-duration">5.44</td>
+          <td class="col-duration">5.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1083,7 +1072,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_46</td>
-          <td class="col-duration">5.41</td>
+          <td class="col-duration">5.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1093,7 +1082,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_47</td>
-          <td class="col-duration">5.20</td>
+          <td class="col-duration">5.95</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1113,7 +1102,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_49</td>
-          <td class="col-duration">5.31</td>
+          <td class="col-duration">5.58</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1123,7 +1112,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_50</td>
-          <td class="col-duration">5.52</td>
+          <td class="col-duration">5.78</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1133,7 +1122,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_51</td>
-          <td class="col-duration">5.32</td>
+          <td class="col-duration">5.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1143,7 +1132,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_52</td>
-          <td class="col-duration">4.34</td>
+          <td class="col-duration">5.91</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1153,7 +1142,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_53</td>
-          <td class="col-duration">4.45</td>
+          <td class="col-duration">6.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1163,7 +1152,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_54</td>
-          <td class="col-duration">4.76</td>
+          <td class="col-duration">5.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1173,7 +1162,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_55</td>
-          <td class="col-duration">4.01</td>
+          <td class="col-duration">6.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1183,7 +1172,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_56</td>
-          <td class="col-duration">4.77</td>
+          <td class="col-duration">6.07</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1193,7 +1182,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_57</td>
-          <td class="col-duration">5.35</td>
+          <td class="col-duration">5.88</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1203,7 +1192,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_58</td>
-          <td class="col-duration">5.52</td>
+          <td class="col-duration">5.95</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1213,7 +1202,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_59</td>
-          <td class="col-duration">5.23</td>
+          <td class="col-duration">5.81</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1223,7 +1212,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_60</td>
-          <td class="col-duration">5.43</td>
+          <td class="col-duration">6.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1233,7 +1222,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_61</td>
-          <td class="col-duration">5.43</td>
+          <td class="col-duration">6.07</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1243,7 +1232,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_62</td>
-          <td class="col-duration">5.63</td>
+          <td class="col-duration">6.19</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1253,7 +1242,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_63</td>
-          <td class="col-duration">4.89</td>
+          <td class="col-duration">5.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1263,7 +1252,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_64</td>
-          <td class="col-duration">4.73</td>
+          <td class="col-duration">5.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1273,7 +1262,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_65</td>
-          <td class="col-duration">5.52</td>
+          <td class="col-duration">5.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1283,7 +1272,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_66</td>
-          <td class="col-duration">6.00</td>
+          <td class="col-duration">5.94</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1293,7 +1282,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_67</td>
-          <td class="col-duration">5.51</td>
+          <td class="col-duration">5.93</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1303,7 +1292,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_68</td>
-          <td class="col-duration">5.60</td>
+          <td class="col-duration">6.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1313,7 +1302,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_69</td>
-          <td class="col-duration">5.58</td>
+          <td class="col-duration">6.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1323,7 +1312,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_70</td>
-          <td class="col-duration">4.43</td>
+          <td class="col-duration">6.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1333,18 +1322,18 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_72</td>
-          <td class="col-duration">4.97</td>
+          <td class="col-duration">6.80</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单打折1
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660158622&#x27;, &#x27;orderId&#x27;: 7430, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660306300&#x27;, &#x27;orderId&#x27;: 7578, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_73</td>
-          <td class="col-duration">5.59</td>
+          <td class="col-duration">6.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1355,18 +1344,18 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_75</td>
-          <td class="col-duration">6.02</td>
+          <td class="col-duration">6.57</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660160977&#x27;, &#x27;orderId&#x27;: 7432, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660308983&#x27;, &#x27;orderId&#x27;: 7580, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_76</td>
-          <td class="col-duration">5.80</td>
+          <td class="col-duration">6.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1377,7 +1366,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_77</td>
-          <td class="col-duration">5.47</td>
+          <td class="col-duration">6.05</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1388,7 +1377,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_78</td>
-          <td class="col-duration">5.65</td>
+          <td class="col-duration">6.41</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1399,73 +1388,73 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_79</td>
-          <td class="col-duration">6.20</td>
+          <td class="col-duration">6.53</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660161653&#x27;, &#x27;orderId&#x27;: 7433, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660309232&#x27;, &#x27;orderId&#x27;: 7581, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_80</td>
-          <td class="col-duration">8.47</td>
+          <td class="col-duration">7.36</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660162124&#x27;, &#x27;orderId&#x27;: 7434, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660310977&#x27;, &#x27;orderId&#x27;: 7582, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_81</td>
-          <td class="col-duration">6.36</td>
+          <td class="col-duration">6.98</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660163164&#x27;, &#x27;orderId&#x27;: 7435, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660311874&#x27;, &#x27;orderId&#x27;: 7583, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_82</td>
-          <td class="col-duration">6.93</td>
+          <td class="col-duration">6.78</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660164367&#x27;, &#x27;orderId&#x27;: 7436, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660312555&#x27;, &#x27;orderId&#x27;: 7584, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_83</td>
-          <td class="col-duration">7.04</td>
+          <td class="col-duration">7.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660165867&#x27;, &#x27;orderId&#x27;: 7437, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660313079&#x27;, &#x27;orderId&#x27;: 7585, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_84</td>
-          <td class="col-duration">6.86</td>
+          <td class="col-duration">7.14</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单打折1
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660166271&#x27;, &#x27;orderId&#x27;: 7438, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660314383&#x27;, &#x27;orderId&#x27;: 7586, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_85</td>
-          <td class="col-duration">6.57</td>
+          <td class="col-duration">6.04</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1476,29 +1465,29 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_86</td>
-          <td class="col-duration">6.99</td>
+          <td class="col-duration">6.96</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660167826&#x27;, &#x27;orderId&#x27;: 7439, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660315188&#x27;, &#x27;orderId&#x27;: 7587, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_87</td>
-          <td class="col-duration">7.05</td>
+          <td class="col-duration">7.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660168850&#x27;, &#x27;orderId&#x27;: 7440, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660316614&#x27;, &#x27;orderId&#x27;: 7588, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_88</td>
-          <td class="col-duration">6.60</td>
+          <td class="col-duration">6.37</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1509,7 +1498,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_89</td>
-          <td class="col-duration">6.38</td>
+          <td class="col-duration">5.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1519,74 +1508,85 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_90</td>
+          <td class="col-duration">6.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单打折0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_91</td>
-          <td class="col-duration">11.30</td>
+          <td class="col-duration">7.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660169761&#x27;, &#x27;orderId&#x27;: 7441, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660317411&#x27;, &#x27;orderId&#x27;: 7589, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_92</td>
-          <td class="col-duration">7.27</td>
+          <td class="col-duration">7.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660170518&#x27;, &#x27;orderId&#x27;: 7442, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660318007&#x27;, &#x27;orderId&#x27;: 7590, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_93</td>
-          <td class="col-duration">10.16</td>
+          <td class="col-duration">7.37</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660171574&#x27;, &#x27;orderId&#x27;: 7443, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660319645&#x27;, &#x27;orderId&#x27;: 7591, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_94</td>
-          <td class="col-duration">7.18</td>
+          <td class="col-duration">7.52</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660172090&#x27;, &#x27;orderId&#x27;: 7444, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660320817&#x27;, &#x27;orderId&#x27;: 7592, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_95</td>
-          <td class="col-duration">7.19</td>
+          <td class="col-duration">7.16</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660173908&#x27;, &#x27;orderId&#x27;: 7445, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660321338&#x27;, &#x27;orderId&#x27;: 7593, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_96</td>
-          <td class="col-duration">7.16</td>
+          <td class="col-duration">7.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单打折1
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660174202&#x27;, &#x27;orderId&#x27;: 7446, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660322892&#x27;, &#x27;orderId&#x27;: 7594, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_97</td>
-          <td class="col-duration">6.32</td>
+          <td class="col-duration">6.31</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1597,29 +1597,29 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_98</td>
-          <td class="col-duration">8.37</td>
+          <td class="col-duration">7.26</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660175477&#x27;, &#x27;orderId&#x27;: 7447, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660323535&#x27;, &#x27;orderId&#x27;: 7595, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_99</td>
-          <td class="col-duration">7.49</td>
+          <td class="col-duration">6.80</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660176723&#x27;, &#x27;orderId&#x27;: 7448, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660324505&#x27;, &#x27;orderId&#x27;: 7596, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_100</td>
-          <td class="col-duration">6.50</td>
+          <td class="col-duration">6.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1630,7 +1630,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_101</td>
-          <td class="col-duration">6.24</td>
+          <td class="col-duration">5.99</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1641,7 +1641,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_102</td>
-          <td class="col-duration">6.38</td>
+          <td class="col-duration">6.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1652,75 +1652,801 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_103</td>
-          <td class="col-duration">6.82</td>
+          <td class="col-duration">6.98</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组用特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660177458&#x27;, &#x27;orderId&#x27;: 7449, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660325823&#x27;, &#x27;orderId&#x27;: 7597, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_104</td>
-          <td class="col-duration">7.40</td>
+          <td class="col-duration">7.51</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务费特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660178104&#x27;, &#x27;orderId&#x27;: 7450, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660326696&#x27;, &#x27;orderId&#x27;: 7598, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_105</td>
-          <td class="col-duration">7.42</td>
+          <td class="col-duration">6.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660179224&#x27;, &#x27;orderId&#x27;: 7451, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660327459&#x27;, &#x27;orderId&#x27;: 7599, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_106</td>
-          <td class="col-duration">7.36</td>
+          <td class="col-duration">7.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务费用特价，整单打折1000
-{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660180265&#x27;, &#x27;orderId&#x27;: 7452, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660328463&#x27;, &#x27;orderId&#x27;: 7600, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_107</td>
+          <td class="col-duration">5.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到789， 商品不特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660329861&#x27;, &#x27;orderId&#x27;: 7601, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_108</td>
+          <td class="col-duration">5.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到789， 商品特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660330468&#x27;, &#x27;orderId&#x27;: 7602, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_109</td>
+          <td class="col-duration">5.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到0， 商品不特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_110</td>
+          <td class="col-duration">5.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到0， 商品特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_111</td>
+          <td class="col-duration">5.89</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到比原价大， 商品不特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660331203&#x27;, &#x27;orderId&#x27;: 7603, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_112</td>
+          <td class="col-duration">5.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到比原价大， 商品特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_113</td>
+          <td class="col-duration">5.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到789， 商品不特价, 添加大于限制的商品备注
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660332642&#x27;, &#x27;orderId&#x27;: 7604, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_114</td>
+          <td class="col-duration">6.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠到789， 商品不特价, 添加正常的商品备注
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660333957&#x27;, &#x27;orderId&#x27;: 7605, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_115</td>
+          <td class="col-duration">5.88</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠orderPreferens，为空
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660334316&#x27;, &#x27;orderId&#x27;: 7606, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_116</td>
+          <td class="col-duration">5.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>商品整单优惠不传orderPreferens
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660335779&#x27;, &#x27;orderId&#x27;: 7607, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_117</td>
+          <td class="col-duration">5.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到789， 商品不特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660336248&#x27;, &#x27;orderId&#x27;: 7608, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_118</td>
+          <td class="col-duration">6.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到789， 商品特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660337231&#x27;, &#x27;orderId&#x27;: 7609, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_119</td>
+          <td class="col-duration">5.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到0， 商品不特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_120</td>
+          <td class="col-duration">5.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到0， 商品特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_121</td>
+          <td class="col-duration">5.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到比原价大， 商品不特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660338935&#x27;, &#x27;orderId&#x27;: 7610, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_122</td>
+          <td class="col-duration">5.33</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到比原价大， 商品特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_123</td>
+          <td class="col-duration">6.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到789， 商品不特价, 添加大于限制的商品备注
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660339592&#x27;, &#x27;orderId&#x27;: 7611, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_124</td>
+          <td class="col-duration">5.92</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠到789， 商品不特价, 添加正常的商品备注
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660340231&#x27;, &#x27;orderId&#x27;: 7612, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_125</td>
+          <td class="col-duration">6.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠orderPreferens，为空
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660341259&#x27;, &#x27;orderId&#x27;: 7613, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_126</td>
+          <td class="col-duration">6.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组商品整单优惠不传orderPreferens
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660342981&#x27;, &#x27;orderId&#x27;: 7614, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_127</td>
+          <td class="col-duration">5.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>套组整单优惠到789， 商品不特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660343911&#x27;, &#x27;orderId&#x27;: 7615, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_128</td>
+          <td class="col-duration">6.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费整单优惠到789， 商品特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660344614&#x27;, &#x27;orderId&#x27;: 7616, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_129</td>
+          <td class="col-duration">5.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠到0， 商品不特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_130</td>
+          <td class="col-duration">5.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠到0， 商品特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_131</td>
+          <td class="col-duration">5.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠到比原价大， 商品不特价
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660345081&#x27;, &#x27;orderId&#x27;: 7617, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_132</td>
+          <td class="col-duration">5.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠到比原价大， 商品特价
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_133</td>
+          <td class="col-duration">5.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠到789， 商品不特价, 添加大于限制的商品备注
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660346546&#x27;, &#x27;orderId&#x27;: 7618, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_134</td>
+          <td class="col-duration">5.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠到789， 商品不特价, 添加正常的商品备注
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660347072&#x27;, &#x27;orderId&#x27;: 7619, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_135</td>
+          <td class="col-duration">6.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠orderPreferens，为空
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660348737&#x27;, &#x27;orderId&#x27;: 7620, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_136</td>
+          <td class="col-duration">5.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>服务费商品整单优惠不传orderPreferens
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660349736&#x27;, &#x27;orderId&#x27;: 7621, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_137</td>
+          <td class="col-duration">7.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660350340&#x27;, &#x27;orderId&#x27;: 7622, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_138</td>
+          <td class="col-duration">7.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660351136&#x27;, &#x27;orderId&#x27;: 7623, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_139</td>
+          <td class="col-duration">6.16</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_140</td>
+          <td class="col-duration">6.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660352176&#x27;, &#x27;orderId&#x27;: 7624, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_141</td>
+          <td class="col-duration">7.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660353793&#x27;, &#x27;orderId&#x27;: 7625, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_142</td>
+          <td class="col-duration">6.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_143</td>
+          <td class="col-duration">6.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_144</td>
+          <td class="col-duration">6.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_145</td>
+          <td class="col-duration">6.89</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660354045&#x27;, &#x27;orderId&#x27;: 7626, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_146</td>
+          <td class="col-duration">7.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660355986&#x27;, &#x27;orderId&#x27;: 7627, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_147</td>
+          <td class="col-duration">7.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660356627&#x27;, &#x27;orderId&#x27;: 7628, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_148</td>
+          <td class="col-duration">7.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660357933&#x27;, &#x27;orderId&#x27;: 7629, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_149</td>
+          <td class="col-duration">6.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660358097&#x27;, &#x27;orderId&#x27;: 7630, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_150</td>
+          <td class="col-duration">7.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660359667&#x27;, &#x27;orderId&#x27;: 7631, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_151</td>
+          <td class="col-duration">6.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_152</td>
+          <td class="col-duration">6.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660360965&#x27;, &#x27;orderId&#x27;: 7632, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_153</td>
+          <td class="col-duration">7.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660361585&#x27;, &#x27;orderId&#x27;: 7633, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_154</td>
+          <td class="col-duration">6.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_155</td>
+          <td class="col-duration">5.92</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_156</td>
+          <td class="col-duration">6.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务费特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_157</td>
+          <td class="col-duration">6.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务费特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660362023&#x27;, &#x27;orderId&#x27;: 7634, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_158</td>
+          <td class="col-duration">7.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660363782&#x27;, &#x27;orderId&#x27;: 7635, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_159</td>
+          <td class="col-duration">6.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务费特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660364097&#x27;, &#x27;orderId&#x27;: 7636, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_160</td>
+          <td class="col-duration">6.87</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，普通特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660365059&#x27;, &#x27;orderId&#x27;: 7637, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_161</td>
+          <td class="col-duration">6.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660366231&#x27;, &#x27;orderId&#x27;: 7638, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_162</td>
+          <td class="col-duration">7.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660367737&#x27;, &#x27;orderId&#x27;: 7639, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_163</td>
+          <td class="col-duration">6.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_164</td>
+          <td class="col-duration">6.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660368393&#x27;, &#x27;orderId&#x27;: 7640, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_165</td>
+          <td class="col-duration">6.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660369850&#x27;, &#x27;orderId&#x27;: 7641, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_166</td>
+          <td class="col-duration">6.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，商品都不特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_167</td>
+          <td class="col-duration">6.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务费特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 251000010, &#x27;message&#x27;: &#x27;实际金额不可小于1&#x27;, &#x27;prompt&#x27;: &#x27;TOAST&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_168</td>
+          <td class="col-duration">5.88</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单优惠到0
+{&#x27;success&#x27;: False, &#x27;data&#x27;: None, &#x27;code&#x27;: 500, &#x27;message&#x27;: &#x27;系统异常&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_169</td>
+          <td class="col-duration">6.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660370802&#x27;, &#x27;orderId&#x27;: 7642, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_170</td>
+          <td class="col-duration">6.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务费特价，整单优惠到10000
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660371568&#x27;, &#x27;orderId&#x27;: 7643, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_171</td>
+          <td class="col-duration">7.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，套组特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660372815&#x27;, &#x27;orderId&#x27;: 7644, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_case/test_order.py::Test_Billings::test_prequalification_172</td>
+          <td class="col-duration">6.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>不参加活动，服务为特价，整单优惠到10
+{&#x27;success&#x27;: True, &#x27;data&#x27;: {&#x27;code&#x27;: &#x27;1000&#x27;, &#x27;orderNo&#x27;: &#x27;2005240660373966&#x27;, &#x27;orderId&#x27;: 7645, &#x27;customId&#x27;: 42529}, &#x27;code&#x27;: 200, &#x27;message&#x27;: &#x27;请求成功&#x27;, &#x27;prompt&#x27;: &#x27;NORMAL&#x27;, &#x27;privacy&#x27;: False}
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order</td>
-          <td class="col-duration">1.89</td>
+          <td class="col-duration">2.42</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试查询商户全部订单
-82
-[&#x27;2005240660180265&#x27;, &#x27;2005240660179224&#x27;, &#x27;2005240660178104&#x27;, &#x27;2005240660177458&#x27;, &#x27;2005240660176723&#x27;, &#x27;2005240660175477&#x27;, &#x27;2005240660174202&#x27;, &#x27;2005240660173908&#x27;, &#x27;2005240660172090&#x27;, &#x27;2005240660171574&#x27;, &#x27;2005240660170518&#x27;, &#x27;2005240660169761&#x27;, &#x27;2005240660168850&#x27;, &#x27;2005240660167826&#x27;, &#x27;2005240660166271&#x27;, &#x27;2005240660165867&#x27;, &#x27;2005240660164367&#x27;, &#x27;2005240660163164&#x27;, &#x27;2005240660162124&#x27;, &#x27;2005240660161653&#x27;, &#x27;2005240660160977&#x27;, &#x27;2005240660159254&#x27;, &#x27;2005240660158622&#x27;, &#x27;2005240660157288&#x27;, &#x27;2005240660156388&#x27;, &#x27;2005240660155040&#x27;, &#x27;2005240660154534&#x27;, &#x27;2005240660153374&#x27;, &#x27;2005240660152543&#x27;, &#x27;2005240660151505&#x27;, &#x27;2005240660150493&#x27;, &#x27;2005240660149181&#x27;, &#x27;2005240660148852&#x27;, &#x27;2005240660147072&#x27;, &#x27;2005240660146272&#x27;, &#x27;2005240660145259&#x27;, &#x27;2005240660144238&#x27;, &#x27;2005240660143095&#x27;, &#x27;2005240660142891&#x27;, &#x27;2005240660141346&#x27;, &#x27;2005240660140945&#x27;, &#x27;2005240660139804&#x27;, &#x27;2005240660138561&#x27;, &#x27;2005240660137503&#x27;, &#x27;2005240660136660&#x27;, &#x27;2005240660135885&#x27;, &#x27;2005240660134311&#x27;, &#x27;2005240660133213&#x27;, &#x27;2005240660132001&#x27;, &#x27;2005240660131348&#x27;, &#x27;2005240660130830&#x27;, &#x27;2005240660129045&#x27;, &#x27;2005240660128249&#x27;, &#x27;2005240660127518&#x27;, &#x27;2005240660126673&#x27;, &#x27;2005240660125380&#x27;, &#x27;2005240660124646&#x27;, &#x27;2005240660123455&#x27;, &#x27;2005240660122319&#x27;, &#x27;2005240660121208&#x27;, &#x27;2005240660120301&#x27;, &#x27;2005240660119017&#x27;, &#x27;2005240660118639&#x27;, &#x27;2005240660117213&#x27;, &#x27;2005240660116049&#x27;, &#x27;2005240660115250&#x27;, &#x27;2005240660114495&#x27;, &#x27;2005240660113222&#x27;, &#x27;2005240660112311&#x27;, &#x27;2005240660111986&#x27;, &#x27;2005240660110411&#x27;, &#x27;2005240660109256&#x27;, &#x27;2005240660108937&#x27;, &#x27;2005240660107692&#x27;, &#x27;2005240660106054&#x27;, &#x27;2005240660105429&#x27;, &#x27;2005240660104076&#x27;, &#x27;2005240660103944&#x27;, &#x27;2005240660101287&#x27;, &#x27;2005240660100720&#x27;, &#x27;2005240660099747&#x27;, &#x27;2005240660098635&#x27;]
+100
+[&#x27;2005240660373966&#x27;, &#x27;2005240660372815&#x27;, &#x27;2005240660371568&#x27;, &#x27;2005240660370802&#x27;, &#x27;2005240660369850&#x27;, &#x27;2005240660368393&#x27;, &#x27;2005240660367737&#x27;, &#x27;2005240660366231&#x27;, &#x27;2005240660365059&#x27;, &#x27;2005240660364097&#x27;, &#x27;2005240660363782&#x27;, &#x27;2005240660362023&#x27;, &#x27;2005240660361585&#x27;, &#x27;2005240660360965&#x27;, &#x27;2005240660359667&#x27;, &#x27;2005240660358097&#x27;, &#x27;2005240660357933&#x27;, &#x27;2005240660356627&#x27;, &#x27;2005240660355986&#x27;, &#x27;2005240660354045&#x27;, &#x27;2005240660353793&#x27;, &#x27;2005240660352176&#x27;, &#x27;2005240660351136&#x27;, &#x27;2005240660350340&#x27;, &#x27;2005240660349736&#x27;, &#x27;2005240660348737&#x27;, &#x27;2005240660347072&#x27;, &#x27;2005240660346546&#x27;, &#x27;2005240660345081&#x27;, &#x27;2005240660344614&#x27;, &#x27;2005240660343911&#x27;, &#x27;2005240660342981&#x27;, &#x27;2005240660341259&#x27;, &#x27;2005240660340231&#x27;, &#x27;2005240660339592&#x27;, &#x27;2005240660338935&#x27;, &#x27;2005240660337231&#x27;, &#x27;2005240660336248&#x27;, &#x27;2005240660335779&#x27;, &#x27;2005240660334316&#x27;, &#x27;2005240660333957&#x27;, &#x27;2005240660332642&#x27;, &#x27;2005240660331203&#x27;, &#x27;2005240660330468&#x27;, &#x27;2005240660329861&#x27;, &#x27;2005240660328463&#x27;, &#x27;2005240660327459&#x27;, &#x27;2005240660326696&#x27;, &#x27;2005240660325823&#x27;, &#x27;2005240660324505&#x27;, &#x27;2005240660323535&#x27;, &#x27;2005240660322892&#x27;, &#x27;2005240660321338&#x27;, &#x27;2005240660320817&#x27;, &#x27;2005240660319645&#x27;, &#x27;2005240660318007&#x27;, &#x27;2005240660317411&#x27;, &#x27;2005240660316614&#x27;, &#x27;2005240660315188&#x27;, &#x27;2005240660314383&#x27;, &#x27;2005240660313079&#x27;, &#x27;2005240660312555&#x27;, &#x27;2005240660311874&#x27;, &#x27;2005240660310977&#x27;, &#x27;2005240660309232&#x27;, &#x27;2005240660308983&#x27;, &#x27;2005240660307237&#x27;, &#x27;2005240660306300&#x27;, &#x27;2005240660305312&#x27;, &#x27;2005240660304058&#x27;, &#x27;2005240660303522&#x27;, &#x27;2005240660302702&#x27;, &#x27;2005240660301572&#x27;, &#x27;2005240660300177&#x27;, &#x27;2005240660299681&#x27;, &#x27;2005240660298644&#x27;, &#x27;2005240660297947&#x27;, &#x27;2005240660296786&#x27;, &#x27;2005240660295751&#x27;, &#x27;2005240660294946&#x27;, &#x27;2005240660293172&#x27;, &#x27;2005240660292893&#x27;, &#x27;2005240660291742&#x27;, &#x27;2005240660290781&#x27;, &#x27;2005240660289701&#x27;, &#x27;2005240660288328&#x27;, &#x27;2005240660287728&#x27;, &#x27;2005240660286263&#x27;, &#x27;2005240660285841&#x27;, &#x27;2005240660284622&#x27;, &#x27;2005240660283252&#x27;, &#x27;2005240660282909&#x27;, &#x27;2005240660281023&#x27;, &#x27;2005240660280145&#x27;, &#x27;2005240660279569&#x27;, &#x27;2005240660278367&#x27;, &#x27;2005240660277773&#x27;, &#x27;2005240660276067&#x27;, &#x27;2005240660275417&#x27;, &#x27;2005240660274028&#x27;]
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_tbpaid</td>
-          <td class="col-duration">4.21</td>
+          <td class="col-duration">2.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试查询商户待支付订单
-82
-[&#x27;2005240660180265&#x27;, &#x27;2005240660179224&#x27;, &#x27;2005240660178104&#x27;, &#x27;2005240660177458&#x27;, &#x27;2005240660176723&#x27;, &#x27;2005240660175477&#x27;, &#x27;2005240660174202&#x27;, &#x27;2005240660173908&#x27;, &#x27;2005240660172090&#x27;, &#x27;2005240660171574&#x27;, &#x27;2005240660170518&#x27;, &#x27;2005240660169761&#x27;, &#x27;2005240660168850&#x27;, &#x27;2005240660167826&#x27;, &#x27;2005240660166271&#x27;, &#x27;2005240660165867&#x27;, &#x27;2005240660164367&#x27;, &#x27;2005240660163164&#x27;, &#x27;2005240660162124&#x27;, &#x27;2005240660161653&#x27;, &#x27;2005240660160977&#x27;, &#x27;2005240660159254&#x27;, &#x27;2005240660158622&#x27;, &#x27;2005240660157288&#x27;, &#x27;2005240660156388&#x27;, &#x27;2005240660155040&#x27;, &#x27;2005240660154534&#x27;, &#x27;2005240660153374&#x27;, &#x27;2005240660152543&#x27;, &#x27;2005240660151505&#x27;, &#x27;2005240660150493&#x27;, &#x27;2005240660149181&#x27;, &#x27;2005240660148852&#x27;, &#x27;2005240660147072&#x27;, &#x27;2005240660146272&#x27;, &#x27;2005240660145259&#x27;, &#x27;2005240660144238&#x27;, &#x27;2005240660143095&#x27;, &#x27;2005240660142891&#x27;, &#x27;2005240660141346&#x27;, &#x27;2005240660140945&#x27;, &#x27;2005240660139804&#x27;, &#x27;2005240660138561&#x27;, &#x27;2005240660137503&#x27;, &#x27;2005240660136660&#x27;, &#x27;2005240660135885&#x27;, &#x27;2005240660134311&#x27;, &#x27;2005240660133213&#x27;, &#x27;2005240660132001&#x27;, &#x27;2005240660131348&#x27;, &#x27;2005240660130830&#x27;, &#x27;2005240660129045&#x27;, &#x27;2005240660128249&#x27;, &#x27;2005240660127518&#x27;, &#x27;2005240660126673&#x27;, &#x27;2005240660125380&#x27;, &#x27;2005240660124646&#x27;, &#x27;2005240660123455&#x27;, &#x27;2005240660122319&#x27;, &#x27;2005240660121208&#x27;, &#x27;2005240660120301&#x27;, &#x27;2005240660119017&#x27;, &#x27;2005240660118639&#x27;, &#x27;2005240660117213&#x27;, &#x27;2005240660116049&#x27;, &#x27;2005240660115250&#x27;, &#x27;2005240660114495&#x27;, &#x27;2005240660113222&#x27;, &#x27;2005240660112311&#x27;, &#x27;2005240660111986&#x27;, &#x27;2005240660110411&#x27;, &#x27;2005240660109256&#x27;, &#x27;2005240660108937&#x27;, &#x27;2005240660107692&#x27;, &#x27;2005240660106054&#x27;, &#x27;2005240660105429&#x27;, &#x27;2005240660104076&#x27;, &#x27;2005240660103944&#x27;, &#x27;2005240660101287&#x27;, &#x27;2005240660100720&#x27;, &#x27;2005240660099747&#x27;, &#x27;2005240660098635&#x27;]
+100
+[&#x27;2005240660373966&#x27;, &#x27;2005240660372815&#x27;, &#x27;2005240660371568&#x27;, &#x27;2005240660370802&#x27;, &#x27;2005240660369850&#x27;, &#x27;2005240660368393&#x27;, &#x27;2005240660367737&#x27;, &#x27;2005240660366231&#x27;, &#x27;2005240660365059&#x27;, &#x27;2005240660364097&#x27;, &#x27;2005240660363782&#x27;, &#x27;2005240660362023&#x27;, &#x27;2005240660361585&#x27;, &#x27;2005240660360965&#x27;, &#x27;2005240660359667&#x27;, &#x27;2005240660358097&#x27;, &#x27;2005240660357933&#x27;, &#x27;2005240660356627&#x27;, &#x27;2005240660355986&#x27;, &#x27;2005240660354045&#x27;, &#x27;2005240660353793&#x27;, &#x27;2005240660352176&#x27;, &#x27;2005240660351136&#x27;, &#x27;2005240660350340&#x27;, &#x27;2005240660349736&#x27;, &#x27;2005240660348737&#x27;, &#x27;2005240660347072&#x27;, &#x27;2005240660346546&#x27;, &#x27;2005240660345081&#x27;, &#x27;2005240660344614&#x27;, &#x27;2005240660343911&#x27;, &#x27;2005240660342981&#x27;, &#x27;2005240660341259&#x27;, &#x27;2005240660340231&#x27;, &#x27;2005240660339592&#x27;, &#x27;2005240660338935&#x27;, &#x27;2005240660337231&#x27;, &#x27;2005240660336248&#x27;, &#x27;2005240660335779&#x27;, &#x27;2005240660334316&#x27;, &#x27;2005240660333957&#x27;, &#x27;2005240660332642&#x27;, &#x27;2005240660331203&#x27;, &#x27;2005240660330468&#x27;, &#x27;2005240660329861&#x27;, &#x27;2005240660328463&#x27;, &#x27;2005240660327459&#x27;, &#x27;2005240660326696&#x27;, &#x27;2005240660325823&#x27;, &#x27;2005240660324505&#x27;, &#x27;2005240660323535&#x27;, &#x27;2005240660322892&#x27;, &#x27;2005240660321338&#x27;, &#x27;2005240660320817&#x27;, &#x27;2005240660319645&#x27;, &#x27;2005240660318007&#x27;, &#x27;2005240660317411&#x27;, &#x27;2005240660316614&#x27;, &#x27;2005240660315188&#x27;, &#x27;2005240660314383&#x27;, &#x27;2005240660313079&#x27;, &#x27;2005240660312555&#x27;, &#x27;2005240660311874&#x27;, &#x27;2005240660310977&#x27;, &#x27;2005240660309232&#x27;, &#x27;2005240660308983&#x27;, &#x27;2005240660307237&#x27;, &#x27;2005240660306300&#x27;, &#x27;2005240660305312&#x27;, &#x27;2005240660304058&#x27;, &#x27;2005240660303522&#x27;, &#x27;2005240660302702&#x27;, &#x27;2005240660301572&#x27;, &#x27;2005240660300177&#x27;, &#x27;2005240660299681&#x27;, &#x27;2005240660298644&#x27;, &#x27;2005240660297947&#x27;, &#x27;2005240660296786&#x27;, &#x27;2005240660295751&#x27;, &#x27;2005240660294946&#x27;, &#x27;2005240660293172&#x27;, &#x27;2005240660292893&#x27;, &#x27;2005240660291742&#x27;, &#x27;2005240660290781&#x27;, &#x27;2005240660289701&#x27;, &#x27;2005240660288328&#x27;, &#x27;2005240660287728&#x27;, &#x27;2005240660286263&#x27;, &#x27;2005240660285841&#x27;, &#x27;2005240660284622&#x27;, &#x27;2005240660283252&#x27;, &#x27;2005240660282909&#x27;, &#x27;2005240660281023&#x27;, &#x27;2005240660280145&#x27;, &#x27;2005240660279569&#x27;, &#x27;2005240660278367&#x27;, &#x27;2005240660277773&#x27;, &#x27;2005240660276067&#x27;, &#x27;2005240660275417&#x27;, &#x27;2005240660274028&#x27;]
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_tbprequal</td>
-          <td class="col-duration">1.67</td>
+          <td class="col-duration">0.53</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1730,7 +2456,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_customeraut</td>
-          <td class="col-duration">0.83</td>
+          <td class="col-duration">0.38</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1740,7 +2466,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_merchantaut</td>
-          <td class="col-duration">0.38</td>
+          <td class="col-duration">0.33</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1760,7 +2486,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_orde_completed</td>
-          <td class="col-duration">0.30</td>
+          <td class="col-duration">0.34</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1770,7 +2496,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_returned</td>
-          <td class="col-duration">0.33</td>
+          <td class="col-duration">0.34</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1780,7 +2506,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_tbreviewed</td>
-          <td class="col-duration">0.30</td>
+          <td class="col-duration">0.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1790,7 +2516,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_auditfailed</td>
-          <td class="col-duration">0.39</td>
+          <td class="col-duration">0.33</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1800,7 +2526,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_modifycustomer</td>
-          <td class="col-duration">0.34</td>
+          <td class="col-duration">0.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1810,7 +2536,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_modifymerchant</td>
-          <td class="col-duration">0.35</td>
+          <td class="col-duration">0.33</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1820,7 +2546,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_passprequal</td>
-          <td class="col-duration">0.31</td>
+          <td class="col-duration">0.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1830,7 +2556,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_query_order_chargeback</td>
-          <td class="col-duration">0.31</td>
+          <td class="col-duration">0.34</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1840,11 +2566,11 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_case/test_order.py::Test_order_query::test_paid</td>
-          <td class="col-duration">54.23</td>
+          <td class="col-duration">59.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试查询商户待支付订单
-82
-[&#x27;2005240660180265&#x27;, &#x27;2005240660179224&#x27;, &#x27;2005240660178104&#x27;, &#x27;2005240660177458&#x27;, &#x27;2005240660176723&#x27;, &#x27;2005240660175477&#x27;, &#x27;2005240660174202&#x27;, &#x27;2005240660173908&#x27;, &#x27;2005240660172090&#x27;, &#x27;2005240660171574&#x27;, &#x27;2005240660170518&#x27;, &#x27;2005240660169761&#x27;, &#x27;2005240660168850&#x27;, &#x27;2005240660167826&#x27;, &#x27;2005240660166271&#x27;, &#x27;2005240660165867&#x27;, &#x27;2005240660164367&#x27;, &#x27;2005240660163164&#x27;, &#x27;2005240660162124&#x27;, &#x27;2005240660161653&#x27;, &#x27;2005240660160977&#x27;, &#x27;2005240660159254&#x27;, &#x27;2005240660158622&#x27;, &#x27;2005240660157288&#x27;, &#x27;2005240660156388&#x27;, &#x27;2005240660155040&#x27;, &#x27;2005240660154534&#x27;, &#x27;2005240660153374&#x27;, &#x27;2005240660152543&#x27;, &#x27;2005240660151505&#x27;, &#x27;2005240660150493&#x27;, &#x27;2005240660149181&#x27;, &#x27;2005240660148852&#x27;, &#x27;2005240660147072&#x27;, &#x27;2005240660146272&#x27;, &#x27;2005240660145259&#x27;, &#x27;2005240660144238&#x27;, &#x27;2005240660143095&#x27;, &#x27;2005240660142891&#x27;, &#x27;2005240660141346&#x27;, &#x27;2005240660140945&#x27;, &#x27;2005240660139804&#x27;, &#x27;2005240660138561&#x27;, &#x27;2005240660137503&#x27;, &#x27;2005240660136660&#x27;, &#x27;2005240660135885&#x27;, &#x27;2005240660134311&#x27;, &#x27;2005240660133213&#x27;, &#x27;2005240660132001&#x27;, &#x27;2005240660131348&#x27;, &#x27;2005240660130830&#x27;, &#x27;2005240660129045&#x27;, &#x27;2005240660128249&#x27;, &#x27;2005240660127518&#x27;, &#x27;2005240660126673&#x27;, &#x27;2005240660125380&#x27;, &#x27;2005240660124646&#x27;, &#x27;2005240660123455&#x27;, &#x27;2005240660122319&#x27;, &#x27;2005240660121208&#x27;, &#x27;2005240660120301&#x27;, &#x27;2005240660119017&#x27;, &#x27;2005240660118639&#x27;, &#x27;2005240660117213&#x27;, &#x27;2005240660116049&#x27;, &#x27;2005240660115250&#x27;, &#x27;2005240660114495&#x27;, &#x27;2005240660113222&#x27;, &#x27;2005240660112311&#x27;, &#x27;2005240660111986&#x27;, &#x27;2005240660110411&#x27;, &#x27;2005240660109256&#x27;, &#x27;2005240660108937&#x27;, &#x27;2005240660107692&#x27;, &#x27;2005240660106054&#x27;, &#x27;2005240660105429&#x27;, &#x27;2005240660104076&#x27;, &#x27;2005240660103944&#x27;, &#x27;2005240660101287&#x27;, &#x27;2005240660100720&#x27;, &#x27;2005240660099747&#x27;, &#x27;2005240660098635&#x27;]
+100
+[&#x27;2005240660373966&#x27;, &#x27;2005240660372815&#x27;, &#x27;2005240660371568&#x27;, &#x27;2005240660370802&#x27;, &#x27;2005240660369850&#x27;, &#x27;2005240660368393&#x27;, &#x27;2005240660367737&#x27;, &#x27;2005240660366231&#x27;, &#x27;2005240660365059&#x27;, &#x27;2005240660364097&#x27;, &#x27;2005240660363782&#x27;, &#x27;2005240660362023&#x27;, &#x27;2005240660361585&#x27;, &#x27;2005240660360965&#x27;, &#x27;2005240660359667&#x27;, &#x27;2005240660358097&#x27;, &#x27;2005240660357933&#x27;, &#x27;2005240660356627&#x27;, &#x27;2005240660355986&#x27;, &#x27;2005240660354045&#x27;, &#x27;2005240660353793&#x27;, &#x27;2005240660352176&#x27;, &#x27;2005240660351136&#x27;, &#x27;2005240660350340&#x27;, &#x27;2005240660349736&#x27;, &#x27;2005240660348737&#x27;, &#x27;2005240660347072&#x27;, &#x27;2005240660346546&#x27;, &#x27;2005240660345081&#x27;, &#x27;2005240660344614&#x27;, &#x27;2005240660343911&#x27;, &#x27;2005240660342981&#x27;, &#x27;2005240660341259&#x27;, &#x27;2005240660340231&#x27;, &#x27;2005240660339592&#x27;, &#x27;2005240660338935&#x27;, &#x27;2005240660337231&#x27;, &#x27;2005240660336248&#x27;, &#x27;2005240660335779&#x27;, &#x27;2005240660334316&#x27;, &#x27;2005240660333957&#x27;, &#x27;2005240660332642&#x27;, &#x27;2005240660331203&#x27;, &#x27;2005240660330468&#x27;, &#x27;2005240660329861&#x27;, &#x27;2005240660328463&#x27;, &#x27;2005240660327459&#x27;, &#x27;2005240660326696&#x27;, &#x27;2005240660325823&#x27;, &#x27;2005240660324505&#x27;, &#x27;2005240660323535&#x27;, &#x27;2005240660322892&#x27;, &#x27;2005240660321338&#x27;, &#x27;2005240660320817&#x27;, &#x27;2005240660319645&#x27;, &#x27;2005240660318007&#x27;, &#x27;2005240660317411&#x27;, &#x27;2005240660316614&#x27;, &#x27;2005240660315188&#x27;, &#x27;2005240660314383&#x27;, &#x27;2005240660313079&#x27;, &#x27;2005240660312555&#x27;, &#x27;2005240660311874&#x27;, &#x27;2005240660310977&#x27;, &#x27;2005240660309232&#x27;, &#x27;2005240660308983&#x27;, &#x27;2005240660307237&#x27;, &#x27;2005240660306300&#x27;, &#x27;2005240660305312&#x27;, &#x27;2005240660304058&#x27;, &#x27;2005240660303522&#x27;, &#x27;2005240660302702&#x27;, &#x27;2005240660301572&#x27;, &#x27;2005240660300177&#x27;, &#x27;2005240660299681&#x27;, &#x27;2005240660298644&#x27;, &#x27;2005240660297947&#x27;, &#x27;2005240660296786&#x27;, &#x27;2005240660295751&#x27;, &#x27;2005240660294946&#x27;, &#x27;2005240660293172&#x27;, &#x27;2005240660292893&#x27;, &#x27;2005240660291742&#x27;, &#x27;2005240660290781&#x27;, &#x27;2005240660289701&#x27;, &#x27;2005240660288328&#x27;, &#x27;2005240660287728&#x27;, &#x27;2005240660286263&#x27;, &#x27;2005240660285841&#x27;, &#x27;2005240660284622&#x27;, &#x27;2005240660283252&#x27;, &#x27;2005240660282909&#x27;, &#x27;2005240660281023&#x27;, &#x27;2005240660280145&#x27;, &#x27;2005240660279569&#x27;, &#x27;2005240660278367&#x27;, &#x27;2005240660277773&#x27;, &#x27;2005240660276067&#x27;, &#x27;2005240660275417&#x27;, &#x27;2005240660274028&#x27;]
 <br/></div></td></tr></tbody></table></body></html>

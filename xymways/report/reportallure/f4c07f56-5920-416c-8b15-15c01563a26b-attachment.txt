@@ -1,0 +1,2 @@
+010订单商品类型不一致开单
+{'success': False, 'data': None, 'code': 500, 'message': '系统异常', 'prompt': 'NORMAL', 'privacy': False}

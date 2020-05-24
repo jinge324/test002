@@ -1,5 +1,150 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 200 != 200",
+      "children" : [ {
+        "name" : "test_add_bond_06",
+        "uid" : "f16bc4c2f0385692",
+        "parentUid" : "a28df9921817dda2d873d210598be3a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316138624,
+          "stop" : 1590316153926,
+          "duration" : 15302
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_bond_07",
+        "uid" : "495d9e2ac9c0aa8d",
+        "parentUid" : "a28df9921817dda2d873d210598be3a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316153992,
+          "stop" : 1590316169915,
+          "duration" : 15923
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_prequalification_71",
+        "uid" : "5fae7059cd5fc955",
+        "parentUid" : "a28df9921817dda2d873d210598be3a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316692475,
+          "stop" : 1590316699366,
+          "duration" : 6891
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_prequalification_74",
+        "uid" : "d529b19bda3bba4",
+        "parentUid" : "a28df9921817dda2d873d210598be3a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316712288,
+          "stop" : 1590316719006,
+          "duration" : 6718
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a28df9921817dda2d873d210598be3a7"
+    }, {
+      "name" : "AssertionError: assert '请求成功' == '请添加送货地址'\n  - 请求成功\n  + 请添加送货地址",
+      "children" : [ {
+        "name" : "test_prequalification_002",
+        "uid" : "f6dcb9b0aa2bb5b5",
+        "parentUid" : "fe9311cfe939bb9c4053a868bbeac6e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316217661,
+          "stop" : 1590316224227,
+          "duration" : 6566
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fe9311cfe939bb9c4053a868bbeac6e0"
+    }, {
+      "name" : "AssertionError: assert '系统异常' == '请填写购货人信息'\n  - 系统异常\n  + 请填写购货人信息",
+      "children" : [ {
+        "name" : "test_prequalification_004",
+        "uid" : "ccff9ec8499a0c5d",
+        "parentUid" : "4c79e1b7dd66bd30300ec476aa82a4f5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316230890,
+          "stop" : 1590316236866,
+          "duration" : 5976
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4c79e1b7dd66bd30300ec476aa82a4f5"
+    }, {
+      "name" : "AssertionError: assert '系统异常' == '请选择会员卡'\n  - 系统异常\n  + 请选择会员卡",
+      "children" : [ {
+        "name" : "test_prequalification_005",
+        "uid" : "bbc0d4752ad5b96b",
+        "parentUid" : "01640faefa4c2bb09838d56c39c968e4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316236946,
+          "stop" : 1590316242720,
+          "duration" : 5774
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "01640faefa4c2bb09838d56c39c968e4"
+    }, {
+      "name" : "AssertionError: assert '系统异常' == '请填写顾客姓名'\n  - 系统异常\n  + 请填写顾客姓名",
+      "children" : [ {
+        "name" : "test_prequalification_006",
+        "uid" : "9e7eaca5d3dab037",
+        "parentUid" : "79bac2dcd7718eca65682ec7c4125566",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316242797,
+          "stop" : 1590316248356,
+          "duration" : 5559
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "79bac2dcd7718eca65682ec7c4125566"
+    }, {
+      "name" : "AssertionError: assert 200 == 500",
+      "children" : [ {
+        "name" : "test_prequalification_009",
+        "uid" : "f0e67ee6523f52ef",
+        "parentUid" : "68f472ff1ca0a3905a6f63603f14aa0b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1590316259900,
+          "stop" : 1590316266021,
+          "duration" : 6121
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "68f472ff1ca0a3905a6f63603f14aa0b"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
 }

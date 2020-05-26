@@ -1,0 +1,2 @@
+003开单不收货，单填写收货地址
+{'success': True, 'data': {'code': '1000', 'orderNo': '2005250660128255', 'orderId': 7773, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

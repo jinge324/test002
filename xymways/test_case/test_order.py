@@ -1673,7 +1673,6 @@ class Test_Billings():
         print(prequalificationorder)
         assert prequalificationorder['code'] == 200
         return prequalificationorder
-
     # 服务费与套组账单优惠
     def test_prequalification_161(self):
         print('不参加活动，商品都特价，整单优惠到10')
@@ -1833,7 +1832,6 @@ class Test_order_query():
             ordernos.append(queryorder[conid]['orderNo'])
         print(ordernos)
         return ordernos
-    # '''
     # 查询商户待预审订单
     def test_query_order_tbprequal(self):
         print('测试查询商户待预审订单')
@@ -2003,7 +2001,6 @@ class Test_order_query():
         for conid in range(0, len(queryorder)):
             ordernos.append(queryorder[conid]['orderNo'])
         return ordernos
-    # '''
     # 取消商户全部待支付订单(时间段之内)
     def test_paid(self):
         iop = Test_order_query().test_query_order_tbpaid()
@@ -2015,3 +2012,411 @@ class Test_order_query():
             tobepaidurl = tobepaidu + tobepaidr
             tobepaidorde = run.run_main(tobepaidurl, 'POST', header_merchant)
             assert tobepaidorde['code'] != 500
+    # 顾客姓名全部查询
+    def test_query_order_01(self):
+        global paging
+        paging = xymways.test_data.data_order.order_query().paging()
+        print('测试查询商户全部订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=3000,3005,4000,4001,5000,6000,8000,9000,9001,9002,9003,9004,9999'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        print(queryorderurl)
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] == 200
+        # print(run.run_main(queryorderurl, 'POST', header_merchant))
+        print(len(queryorder))
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        print(ordernos)
+        return ordernos
+    # 顾客姓名查询商户待支付订单
+    def test_query_order_tbpaid_02(self):
+        print('顾客姓名查询商户待支付订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=3000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        print(len(queryorder))
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        print(ordernos)
+        return ordernos
+    # 顾客姓名查询商户待预审订单
+    def test_query_order_tbprequal_03(self):
+        print('顾客姓名查询商户待预审订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=3005'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户顾客签名订单
+    def test_query_order_customeraut_04(self):
+        print('顾客姓名查询商户顾客签名订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=4000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户商户待签名订单
+    def test_query_order_merchantaut_05(self):
+        print('顾客姓名查询商户商户待签名订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=4001'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户待完成订单
+    def test_query_order_tbcompleted_06(self):
+        print('顾客姓名查询商户待完成订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=5000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户已完成订单
+    def test_query_orde_completed_07(self):
+        print('顾客姓名查询商户已完成订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=6000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户已退货订单
+    def test_query_order_returned_08(self):
+        print('顾客姓名查询商户已退货订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=8000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户待审核订单
+    def test_query_order_tbreviewed_09(self):
+        print('顾客姓名查询商户待审核订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户审核不通过订单
+    def test_query_order_auditfailed_10(self):
+        print('顾客姓名查询商户审核不通过订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9001'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户修改订单顾客待确认订单
+    def test_query_order_modifycustomer_11(self):
+        print('顾客姓名查询商户修改订单顾客待确认订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9002'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户待支付订单
+    def test_query_order_modifymerchant_12(self):
+        print('顾客姓名查询商户待支付订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9003'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户修改订单顾客待确认订单
+    def test_query_order_passprequal_13(self):
+        print('顾客姓名查询商户修改订单顾客待确认订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9004'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客姓名查询商户已退单订单
+    def test_query_order_chargeback_14(self):
+        """百度搜索接口"""
+        print('顾客姓名查询商户已退单订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&customName=' + paging[2] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9999'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # '''
+    # 顾客手机号全部查询
+    def test_query_order_15(self):
+        global paging
+        paging = xymways.test_data.data_order.order_query().paging()
+        print('顾客手机号商户全部订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=3000,3005,4000,4001,5000,6000,8000,9000,9001,9002,9003,9004,9999'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        print(queryorderurl)
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] == 200
+        # print(run.run_main(queryorderurl, 'POST', header_merchant))
+        print(len(queryorder))
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        print(ordernos)
+        return ordernos
+    # 顾客手机号查询商户待支付订单
+    def test_query_order_tbpaid_16(self):
+        print('顾客手机号查询商户待支付订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=3000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        print(len(queryorder))
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        print(ordernos)
+        return ordernos
+    # 顾客手机号查询商户待预审订单
+    def test_query_order_tbprequal_17(self):
+        print('顾客手机号查询商户待预审订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=3005'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户顾客签名订单
+    def test_query_order_customeraut_18(self):
+        print('顾客手机号查询商户顾客签名订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=4000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户商户待签名订单
+    def test_query_order_merchantaut_19(self):
+        print('顾客手机号查询商户商户待签名订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=4001'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户待完成订单
+    def test_query_order_tbcompleted_20(self):
+        print('顾客手机号查询商户待完成订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=5000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户已完成订单
+    def test_query_orde_completed_21(self):
+        print('顾客手机号查询商户已完成订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=6000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户已退货订单
+    def test_query_order_returned_22(self):
+        print('顾客手机号查询商户已退货订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=8000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户待审核订单
+    def test_query_order_tbreviewed_23(self):
+        print('顾客手机号查询商户待审核订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9000'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户审核不通过订单
+    def test_query_order_auditfailed_24(self):
+        print('顾客手机号查询商户审核不通过订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9001'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户修改订单顾客待确认订单
+    def test_query_order_modifycustomer_25(self):
+        print('顾客手机号查询商户修改订单顾客待确认订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9002'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户待支付订单
+    def test_query_order_modifymerchant_26(self):
+        print('顾客手机号查询商户待支付订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9003'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户修改订单顾客待确认订单
+    def test_query_order_passprequal_27(self):
+        print('顾客手机号查询商户修改订单顾客待确认订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9004'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+        # print(len(queryorder), queryorder[0]['orderNo'])
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+    # 顾客手机号查询商户已退单订单
+    def test_query_order_chargeback_28(self):
+        """百度搜索接口"""
+        print('顾客手机号查询商户已退单订单')
+        queryorderu = 'http://api.xymtest.com/merchant/store/order/manage/page/list?pageNo='
+        queryorderr = json.dumps(paging[0]) + '&pageSize=' + json.dumps(paging[1]) + '&mobile=' + paging[3] + '&saleStartTime=' + saleStartTime + '&saleEndTime=' + saleEndTime
+        queryorderl = '&orderStatusLists=9999'
+        queryorderurl = queryorderu + queryorderr + queryorderl
+        queryorder = run.run_main(queryorderurl, 'POST', header_merchant)['data']['list']
+            # print(len(queryorder), queryorder[0]['orderNo'])
+        assert run.run_main(queryorderurl, 'POST', header_merchant)['code'] != 500
+        ordernos = []
+        for conid in range(0, len(queryorder)):
+            ordernos.append(queryorder[conid]['orderNo'])
+        return ordernos
+

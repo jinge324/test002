@@ -1,0 +1,72 @@
+{
+  "uid" : "10382a5cd1060bd9",
+  "name" : "test_add_bond_08",
+  "fullName" : "test_case.test_fee_01.Testfee#test_add_bond_08",
+  "historyId" : "bed8f26bab1f1e74d4e269f08594ce6d",
+  "time" : {
+    "start" : 1590397097127,
+    "stop" : 1590397105244,
+    "duration" : 8117
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ec06053a47917881",
+      "name" : "stdout",
+      "source" : "ec06053a47917881.txt",
+      "type" : "text/plain",
+      "size" : 178
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_fee_01"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testfee"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-18EISHC"
+  }, {
+    "name" : "thread",
+    "value" : "88628-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_fee_01"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "10382a5cd1060bd9.json",
+  "parameterValues" : [ ]
+}

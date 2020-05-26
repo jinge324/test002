@@ -1,0 +1,2 @@
+商品整单优惠orderPreferens，为空
+{'success': True, 'data': {'code': '1000', 'orderNo': '2005250660213035', 'orderId': 7858, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

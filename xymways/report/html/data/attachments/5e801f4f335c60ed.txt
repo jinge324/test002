@@ -1,0 +1,2 @@
+商品整单优惠到789， 商品不特价, 添加大于限制的商品备注
+{'success': True, 'data': {'code': '1000', 'orderNo': '2005250660211178', 'orderId': 7856, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

@@ -9,11 +9,27 @@ timeStamp = xymways.test_data.data_total.time_obtain()
 # timeStamp = xymways.test_data.data_total.time_obtain()
 # 订单查询
 class order_query():
-    # 订单分页
+    # 订单查询分页
     def paging(self):
         pageNo = 1
-        pageSize = 100
-        return pageNo, pageSize
+        pageSize = 200
+        # 顾客姓名
+        customername = '赵襟歌'
+        # 顾客手机号
+        customerphone ='15871255250'
+        # 订单编号
+        orderno = ''
+        # 支付编号
+        paymentno = ''
+        # 免单
+        exemptionname = ''
+        # 满额礼
+        fullforeheadgift = ''
+        # 联单
+        jointroder = ''
+        return pageNo, pageSize, customername, customerphone
+        #, orderno, paymentno, exemptionname, fullforeheadgift, jointroder
+    # 用户开单
     def order(self):
         # 老用户手机号
         oldnumber = '15871255250'

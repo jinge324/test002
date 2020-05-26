@@ -1,0 +1,72 @@
+{
+  "uid" : "a469c50c17cb0f44",
+  "name" : "test_prequalification_128",
+  "fullName" : "test_case.test_order.Test_Billings#test_prequalification_128",
+  "historyId" : "97b3b276a16f1124871af4dd2046ffc4",
+  "time" : {
+    "start" : 1590398026381,
+    "stop" : 1590398032318,
+    "duration" : 5937
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "432083fec24c4a98",
+      "name" : "stdout",
+      "source" : "432083fec24c4a98.txt",
+      "type" : "text/plain",
+      "size" : 233
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Billings"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-18EISHC"
+  }, {
+    "name" : "thread",
+    "value" : "88628-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a469c50c17cb0f44.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,2 @@
+套组商品整单优惠不传orderPreferens
+{'success': True, 'data': {'code': '1000', 'orderNo': '2005250660221243', 'orderId': 7866, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

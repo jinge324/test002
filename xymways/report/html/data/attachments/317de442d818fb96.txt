@@ -1,0 +1,2 @@
+不参加活动，服务费特价，整单优惠到10
+{'success': True, 'data': {'code': '1000', 'orderNo': '2005250660243110', 'orderId': 7888, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

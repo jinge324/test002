@@ -1,0 +1,80 @@
+{
+  "uid" : "e8575b230417a19b",
+  "name" : "test_prequalification_002",
+  "fullName" : "test_case.test_order.Test_Billings#test_prequalification_002",
+  "historyId" : "5bd888da2be1a5be4bded7400ca9977e",
+  "time" : {
+    "start" : 1590397129023,
+    "stop" : 1590397135439,
+    "duration" : 6416
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '请求成功' == '请添加送货地址'\n  - 请求成功\n  + 请添加送货地址",
+  "statusTrace" : "self = <test_order.Test_Billings object at 0x000002969E9A1208>\n\n    def test_prequalification_002(self):\n        print('002开单商品收货，但不填写收货地址')\n        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'\n        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[1]\n        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,\n                                             json.dumps(prequalificationdata))\n        print(prequalificationorder)\n>       assert prequalificationorder['message'] == '请添加送货地址'\nE       AssertionError: assert '请求成功' == '请添加送货地址'\nE         - 请求成功\nE         + 请添加送货地址\n\n..\\test_case\\test_order.py:89: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert '请求成功' == '请添加送货地址'\n  - 请求成功\n  + 请添加送货地址",
+    "statusTrace" : "self = <test_order.Test_Billings object at 0x000002969E9A1208>\n\n    def test_prequalification_002(self):\n        print('002开单商品收货，但不填写收货地址')\n        prequalificationurl = 'http://api.xymtest.com/merchant/store/order/open/create'\n        prequalificationdata = xymways.test_data.data_order.order_billing.billings_01()[1]\n        prequalificationorder = run.run_main(prequalificationurl, 'POST', header_merchant,\n                                             json.dumps(prequalificationdata))\n        print(prequalificationorder)\n>       assert prequalificationorder['message'] == '请添加送货地址'\nE       AssertionError: assert '请求成功' == '请添加送货地址'\nE         - 请求成功\nE         + 请添加送货地址\n\n..\\test_case\\test_order.py:89: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "668364afe7d0dcb3",
+      "name" : "stdout",
+      "source" : "668364afe7d0dcb3.txt",
+      "type" : "text/plain",
+      "size" : 238
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Billings"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-18EISHC"
+  }, {
+    "name" : "thread",
+    "value" : "88628-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "e8575b230417a19b.json",
+  "parameterValues" : [ ]
+}

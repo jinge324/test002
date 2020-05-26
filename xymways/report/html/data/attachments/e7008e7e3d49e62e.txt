@@ -1,0 +1,2 @@
+商品整单优惠到比原价大， 商品不特价
+{'success': True, 'data': {'code': '1000', 'orderNo': '2005250660210263', 'orderId': 7855, 'customId': 42529}, 'code': 200, 'message': '请求成功', 'prompt': 'NORMAL', 'privacy': False}

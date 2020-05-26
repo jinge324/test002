@@ -1,0 +1,75 @@
+{
+  "uid" : "d101eed6326d2f64",
+  "name" : "test_query_order_chargeback_28",
+  "fullName" : "test_case.test_order.Test_order_query#test_query_order_chargeback_28",
+  "historyId" : "185a5df1dc67d9cf8801ea935191ef13",
+  "time" : {
+    "start" : 1590398389244,
+    "stop" : 1590398390525,
+    "duration" : 1281
+  },
+  "description" : "百度搜索接口",
+  "descriptionHtml" : "<p>百度搜索接口</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "百度搜索接口",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e2ffcbf31cc09347",
+      "name" : "stdout",
+      "source" : "e2ffcbf31cc09347.txt",
+      "type" : "text/plain",
+      "size" : 43
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_order_query"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-18EISHC"
+  }, {
+    "name" : "thread",
+    "value" : "88628-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d101eed6326d2f64.json",
+  "parameterValues" : [ ]
+}
